@@ -39,107 +39,24 @@ public class WelcomeScene extends PixelScene {
 
 	private static final String TTL_Welcome = "Welcome!";
 
-	private static final String TTL_Update = "v0.3.0: The Wand Rework!";
+	private static final String TTL_Update = "v0.0.1";
 
 	private static final String TTL_Future = "Wait What?";
 
 	private static final String TXT_Welcome =
-			"Shattered Pixel Dungeon is a rework/expansion of Watabou's Pixel Dungeon.\n\n"+
-			"The goal is to enhance the game by improving existing content and adding tonnes of new stuff!\n\n"+
-			"Shattered Pixel Dungeon is being constantly updated, so expect more new content soon!\n\n"+
-			"Happy Dungeoneering!";
+			"Buttered Pixel Dungeon is a fork of Shattered Pixel Dungeon, covered in a thick layer of low-fat margarine.\n\n"+
+			"Buttered Pixel Dungeon is still under development, and open to suggestions. Feel free to open pull requests on GitHub!\n\n"+
+			"Enjoy!";
 
 	private static final String TXT_Update =
-			"v0.3.0e & v0.3.0d:\n" +
-					"- Performance improvements\n" +
-					"- Various bugfixes\n" +
-					"\n" +
-					"v0.3.0c:\n" +
-					"- Lots of under-the-hood changes\n" +
-					"(let me know if you run into any bugs)\n" +
-					"- Many bugfixes\n" +
-					"Rebalances:\n" +
-					"- Wand of Corruption & Venom rebalanced.\n" +
-					"- Mages staff now has +1 max charges\n" +
-					"- Mage now partially IDs wands on use\n" +
-					"- Magic missile wand reduced to 3 max charges\n" +
-					"- Warlock gets more recharge from food\n" +
-					"- Battlemage only recharges his staff\n" +
-					"- Many battlemage effects tweaked\n" +
-					"- Yog Dzewa now heals 1hp per turn\n" +
-					"\n" +
-					"v0.3.0b & v0.3.0a:\n" +
-					"- Fixed many bugs\n" +
-					"- Buffed mage and huntress base damages to compensate for increased rat numbers on floor 1.\n" +
-					"\n" +
-					"v0.3.0:\n" +
-					"Mage reworked!:\n" +
-					"- No longer starts with knuckledusters or a wand\n" +
-					"- Can no longer equip wands\n" +
-					"- Now starts with a unique mages staff, empowered with magic missile to start.\n" +
-					"- Battlemage reworked, staff now deals bonus effects when used as a melee weapon.\n" +
-					"- Warlock reworked, gains more health and fullness from gaining exp, but food no longer restores hunger.\n" +
-					"\n" +
-					"General Wand Changes:\n" +
-					"- Wand types are now known by default.\n" +
-					"- Wands now each have unique sprites.\n" +
-					"- Wands now cap at 10 charges instead of 9\n" +
-					"- Wands now recharge faster the more charges are missing, for all classes.\n" +
-					"- Self-targeting with wands is no longer possible.\n" +
-					"- Wand recharge effects now give charge over time, instead of instantly.\n" +
-					"- Wands can now be cursed!\n" +
-					"\n" +
-					"All wands have been reworked!\n" +
-					"\n" +
-					"Removed wands:\n" +
-					"- Flock\n" +
-					"- Blink\n" +
-					"- Teleportation\n" +
-					"- Avalanche\n" +
-					"\n" +
-					"Reworked wands:\n" +
-					"- Magic Missile\n" +
-					"- Lightning\n" +
-					"- Disintegration\n" +
-					"- Fireblast (previously Firebolt)\n" +
-					"- Venom (previously poison)\n" +
-					"- Frost (previously Slowing)\n" +
-					"- Blast Wave (previously Telekinesis)\n" +
-					"- Corruption (previously Amok)\n" +
-					"- Regrowth\n" +
-					"\n" +
-					"New Wands:\n" +
-					"- Prismatic Light\n" +
-					"- Transfusion\n" +
-					"\n" +
-					"New Artifacts:\n" +
-					"- Ethereal Chains\n" +
-					"- Lloyd's Beacon\n" +
-					"\n" +
-					"Misc. Balance changes:\n" +
-					"- Blessed Ankhs now revive at 1/4hp, but also grant initiative.\n" +
-					"- Alchemist's Toolkit removed (will be reworked)\n" +
-					"- Chalice of blood nerfed, now regens less hp at high levels.\n" +
-					"- Cape of Thorns buffed, now absorbs all damage, but only deflects adjacent attacks.\n" +
-					"- Sandals of nature adjusted, now give more seeds, less dew.\n" +
-					"- Hunger no longer increases while fighting bosses.\n" +
-					"- Floor 1 now spawns 10 rats every time, exactly enough to level up.\n" +
-					"- Scrolls of recharging and mirror image are now more common.\n" +
-					"- Mimics are now less common, stronger, & give better loot.\n" +
-					"\n" +
-					"UI tweaks:\n" +
-					"- New app icon!\n" +
-					"- Shading added to main game interface\n" +
-					"- Buffs now have descriptions, tap their icons!\n" +
-					"- Visual indicator added for surprising enemies";
+			"v0.0.1:\n" +
+					"- Built off of v0.3.0e of Shattered Pixel Dungeon:\n";
 
 	private static final String TXT_Future =
-			"It seems that your current saves are from a future version of Shattered Pixel Dungeon!\n\n"+
+			"It seems that your current saves are from a future version of Buttered Pixel Dungeon!\n\n"+
 			"Either you're messing around with older versions of the app, or something has gone buggy.\n\n"+
 			"Regardless, tread with caution! Your saves may contain things which don't exist in this version, "+
 			"this could cause some very weird errors to occur.";
-
-	private static final String LNK = "https://play.google.com/store/apps/details?id=com.mrlolethan.butteredpd";
 
 	@Override
 	public void create() {
