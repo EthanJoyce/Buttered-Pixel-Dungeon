@@ -29,12 +29,12 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.scenes.TitleScene;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Music;
+import com.watabou.noosa.audio.Sample;
 
 public class ButteredPixelDungeon extends Game {
 	
