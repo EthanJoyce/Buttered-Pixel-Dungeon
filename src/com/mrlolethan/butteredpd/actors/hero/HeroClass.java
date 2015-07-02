@@ -22,9 +22,9 @@ package com.mrlolethan.butteredpd.actors.hero;
 
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
+import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.items.TomeOfMastery;
 import com.mrlolethan.butteredpd.items.armor.ClothArmor;
 import com.mrlolethan.butteredpd.items.artifacts.CloakOfShadows;
@@ -33,13 +33,12 @@ import com.mrlolethan.butteredpd.items.potions.PotionOfMindVision;
 import com.mrlolethan.butteredpd.items.potions.PotionOfStrength;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicMapping;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
-import com.mrlolethan.butteredpd.items.wands.WandOfFireblast;
-import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
 import com.mrlolethan.butteredpd.items.wands.WandOfMagicMissile;
 import com.mrlolethan.butteredpd.items.weapon.melee.Dagger;
+import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
 import com.mrlolethan.butteredpd.items.weapon.melee.ShortSword;
-import com.mrlolethan.butteredpd.items.weapon.missiles.Dart;
 import com.mrlolethan.butteredpd.items.weapon.missiles.Boomerang;
+import com.mrlolethan.butteredpd.items.weapon.missiles.Dart;
 import com.watabou.utils.Bundle;
 
 public enum HeroClass {

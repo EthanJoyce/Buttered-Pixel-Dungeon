@@ -20,12 +20,12 @@
  */
 package com.mrlolethan.butteredpd.actors.buffs;
 
+import java.text.DecimalFormat;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
-
-import java.text.DecimalFormat;
-import java.util.HashSet;
 
 public class Buff extends Actor {
 	

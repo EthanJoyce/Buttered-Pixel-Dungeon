@@ -22,9 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs.npcs;
 
 import java.util.ArrayList;
 
-import com.mrlolethan.butteredpd.actors.hero.Hero;
-import com.mrlolethan.butteredpd.items.Generator;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Journal;
@@ -34,9 +31,11 @@ import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.blobs.ToxicGas;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Roots;
+import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.potions.PotionOfStrength;
@@ -53,6 +52,7 @@ import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
 import com.mrlolethan.butteredpd.windows.WndQuest;
 import com.mrlolethan.butteredpd.windows.WndWandmaker;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

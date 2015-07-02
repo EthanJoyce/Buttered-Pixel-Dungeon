@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 
 import java.util.HashSet;
 
-import com.watabou.noosa.Camera;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ResultDescriptions;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -35,6 +34,7 @@ import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.sprites.ShamanSprite;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 

@@ -20,16 +20,16 @@
  */
 package com.mrlolethan.butteredpd.items.scrolls;
 
+import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.FlavourBuff;
-import com.mrlolethan.butteredpd.ui.BuffIndicator;
-import com.watabou.noosa.audio.Sample;
-import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.effects.SpellSprite;
 import com.mrlolethan.butteredpd.effects.particles.EnergyParticle;
+import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 
 public class ScrollOfRecharging extends Scroll {
 

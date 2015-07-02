@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.items;
 
 import com.mrlolethan.butteredpd.actors.Char;
-import com.mrlolethan.butteredpd.items.EquipableItem;
 
 public abstract class KindofMisc extends EquipableItem {
 

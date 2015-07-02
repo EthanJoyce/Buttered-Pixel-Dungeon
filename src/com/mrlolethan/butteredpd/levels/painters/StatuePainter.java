@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.levels.painters;
 
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.mobs.Statue;
 import com.mrlolethan.butteredpd.items.keys.IronKey;
 import com.mrlolethan.butteredpd.levels.Level;

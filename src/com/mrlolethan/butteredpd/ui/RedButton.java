@@ -20,14 +20,14 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Chrome;
+import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Chrome;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
 
 public class RedButton extends Button {
 	

@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.armor.glyphs;
 
-import com.watabou.noosa.Camera;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Roots;
@@ -31,6 +30,7 @@ import com.mrlolethan.butteredpd.items.armor.Armor.Glyph;
 import com.mrlolethan.butteredpd.plants.Earthroot;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSprite.Glowing;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Random;
 
 public class Entanglement extends Glyph {

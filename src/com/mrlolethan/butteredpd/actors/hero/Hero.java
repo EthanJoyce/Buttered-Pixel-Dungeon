@@ -20,6 +20,10 @@
  */
 package com.mrlolethan.butteredpd.actors.hero;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Bones;
@@ -85,8 +89,8 @@ import com.mrlolethan.butteredpd.items.rings.RingOfMight;
 import com.mrlolethan.butteredpd.items.rings.RingOfTenacity;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicMapping;
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicalInfusion;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.weapon.melee.MeleeWeapon;
 import com.mrlolethan.butteredpd.items.weapon.missiles.MissileWeapon;
 import com.mrlolethan.butteredpd.levels.Level;
@@ -113,10 +117,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-
 public class Hero extends Char {
 
 	{
@@ -130,8 +130,6 @@ public class Hero extends Char {
 	private static final String TXT_NEW_LEVEL =
 		"Welcome to level %d! Now you are healthier and more focused. " +
 		"It's easier for you to hit enemies and dodge their attacks.";
-	private static final String TXT_LEVEL_CAP =
-		"You can't gain any more levels, but your experiences still give you a burst of energy!";
 	
 	public static final String TXT_YOU_NOW_HAVE	= "You now have %s";
 	
@@ -1250,7 +1248,7 @@ public class Hero extends Char {
 			ankh.detach(belongings.backpack);
 
 			Sample.INSTANCE.play( Assets.SND_TELEPORT );
-			GLog.w( ankh.TXT_REVIVE );
+			GLog.w( Ankh.TXT_REVIVE );
 			Statistics.ankhsUsed++;
 
 			return;

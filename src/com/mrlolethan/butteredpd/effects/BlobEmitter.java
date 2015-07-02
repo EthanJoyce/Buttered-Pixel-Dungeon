@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.particles.Emitter;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Random;
 
 public class BlobEmitter extends Emitter {

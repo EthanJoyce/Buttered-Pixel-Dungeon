@@ -21,9 +21,9 @@
 package com.mrlolethan.butteredpd.windows;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapTextMultiline;
 
 public class WndMessage extends Window {
 

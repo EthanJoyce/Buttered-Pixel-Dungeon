@@ -20,16 +20,6 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.watabou.input.Touchscreen.Touch;
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.NinePatch;
-import com.watabou.noosa.TouchArea;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.ui.Button;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.effects.Speck;
@@ -40,6 +30,16 @@ import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.HeroSprite;
 import com.mrlolethan.butteredpd.windows.WndGame;
 import com.mrlolethan.butteredpd.windows.WndHero;
+import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.TouchArea;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.ui.Button;
+import com.watabou.noosa.ui.Component;
 
 public class StatusPane extends Component {
 

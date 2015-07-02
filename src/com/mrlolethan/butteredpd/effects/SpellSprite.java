@@ -22,12 +22,12 @@ package com.mrlolethan.butteredpd.effects;
 
 import java.util.HashMap;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
 
 public class SpellSprite extends Image {
 

@@ -22,11 +22,6 @@ package com.mrlolethan.butteredpd.sprites;
 
 import android.graphics.Bitmap;
 
-import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.MovieClip;
-import com.watabou.noosa.TextureFilm;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
@@ -38,6 +33,11 @@ import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.MovieClip;
+import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;

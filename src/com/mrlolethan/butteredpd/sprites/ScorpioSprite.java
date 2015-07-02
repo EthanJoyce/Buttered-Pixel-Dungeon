@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.items.weapon.missiles.Dart;
 import com.mrlolethan.butteredpd.levels.Level;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.utils.Callback;
 
 public class ScorpioSprite extends MobSprite {

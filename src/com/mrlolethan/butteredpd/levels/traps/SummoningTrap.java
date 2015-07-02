@@ -24,7 +24,6 @@ import java.util.ArrayList;
 
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
-import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.mobs.Bestiary;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfTeleportation;

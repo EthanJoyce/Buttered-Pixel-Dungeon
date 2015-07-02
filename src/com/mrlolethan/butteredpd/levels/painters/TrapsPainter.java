@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.levels.painters;
 
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.buffs.Poison;
 import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Item;
@@ -39,13 +38,13 @@ public class TrapsPainter extends Painter {
 
 	public static void paint( Level level, Room room ) {
 		 
-		Class traps[] = new Class[]{
+		Class<?> traps[] = new Class<?>[]{
 			ToxicTrap.class, ToxicTrap.class, ToxicTrap.class,
 			ParalyticTrap.class, ParalyticTrap.class,
 			!Dungeon.bossLevel(Dungeon.depth + 1) ? null : SummoningTrap.class};
 		fill( level, room, Terrain.WALL );
 
-		Class trap = Random.element(traps);
+		Class<?> trap = Random.element(traps);
 
 		if (trap == null){
 			fill(level, room, 1, Terrain.CHASM);

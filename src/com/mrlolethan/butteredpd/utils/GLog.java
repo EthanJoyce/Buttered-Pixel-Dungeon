@@ -20,9 +20,9 @@
  */
 package com.mrlolethan.butteredpd.utils;
 
-import com.watabou.utils.Signal;
-
 import android.util.Log;
+
+import com.watabou.utils.Signal;
 
 public class GLog {
 

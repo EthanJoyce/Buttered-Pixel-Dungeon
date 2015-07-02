@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.mobs.Shaman;
 import com.mrlolethan.butteredpd.effects.Lightning;
+import com.watabou.noosa.TextureFilm;
 
 public class ShamanSprite extends MobSprite {
 	

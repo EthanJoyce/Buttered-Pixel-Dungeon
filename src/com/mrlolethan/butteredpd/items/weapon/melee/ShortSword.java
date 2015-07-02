@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.weapon.melee;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -31,8 +33,6 @@ import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.windows.WndBag;
 import com.watabou.noosa.audio.Sample;
-
-import java.util.ArrayList;
 
 public class ShortSword extends MeleeWeapon {
 	

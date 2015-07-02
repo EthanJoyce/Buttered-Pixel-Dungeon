@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.items;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Shopkeeper;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.watabou.noosa.audio.Sample;
-
-import java.util.ArrayList;
 
 public class MerchantsBeacon extends Item {
 

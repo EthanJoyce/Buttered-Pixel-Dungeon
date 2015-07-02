@@ -20,11 +20,10 @@
  */
 package com.mrlolethan.butteredpd;
 
+import java.util.HashMap;
+
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.watabou.utils.Bundle;
-
-import java.io.IOException;
-import java.util.HashMap;
 
 public class GamesInProgress {
 

@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.artifacts;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.buffs.Awareness;
@@ -32,8 +34,6 @@ import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.noosa.audio.Sample;
-
-import java.util.ArrayList;
 
 public class TalismanOfForesight extends Artifact {
 

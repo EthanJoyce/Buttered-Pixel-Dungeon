@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.levels.traps;
 
-import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.blobs.Fire;
 import com.mrlolethan.butteredpd.effects.CellEmitter;

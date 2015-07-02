@@ -22,25 +22,25 @@ package com.mrlolethan.butteredpd.items.wands;
 
 import java.util.ArrayList;
 
-import com.mrlolethan.butteredpd.actors.hero.HeroClass;
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfRecharging;
-import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.effects.MagicMissile;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.bags.Bag;
 import com.mrlolethan.butteredpd.items.rings.RingOfMagic.Magic;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfRecharging;
+import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
 import com.mrlolethan.butteredpd.mechanics.Ballistica;
 import com.mrlolethan.butteredpd.scenes.CellSelector;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.ui.QuickSlotButton;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
@@ -52,10 +52,6 @@ public abstract class Wand extends Item {
 
 	public static final String AC_ZAP	= "ZAP";
 	
-	private static final String TXT_WOOD	= "This thin %s wand is warm to the touch. Who knows what it will do when used?";
-	private static final String TXT_DAMAGE	= "When this wand is used as a melee weapon, its average damage is %d points per hit.";
-	private static final String TXT_WEAPON	= "You can use this wand as a melee weapon.";
-			
 	private static final String TXT_FIZZLES		= "your wand fizzles; it must not have enough charge.";
 	private static final String TXT_SELF_TARGET	= "You can't target yourself";
 

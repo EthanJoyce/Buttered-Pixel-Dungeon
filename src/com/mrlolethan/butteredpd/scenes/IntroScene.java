@@ -20,8 +20,8 @@
  */
 package com.mrlolethan.butteredpd.scenes;
 
-import com.watabou.noosa.Game;
 import com.mrlolethan.butteredpd.windows.WndStory;
+import com.watabou.noosa.Game;
 
 public class IntroScene extends PixelScene {
 

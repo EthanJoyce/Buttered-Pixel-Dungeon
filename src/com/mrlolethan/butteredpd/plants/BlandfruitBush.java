@@ -21,8 +21,6 @@
 package com.mrlolethan.butteredpd.plants;
 
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.Actor;
-import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.items.food.Blandfruit;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 
@@ -39,8 +37,6 @@ public class BlandfruitBush extends Plant {
 
 	@Override
 	public void activate() {
-		Char ch = Actor.findChar(pos);
-
 		Dungeon.level.drop( new Blandfruit(), pos ).sprite.drop();
 	}
 

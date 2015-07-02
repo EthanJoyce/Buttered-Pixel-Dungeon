@@ -22,12 +22,12 @@ package com.mrlolethan.butteredpd.ui;
 
 import java.util.regex.Pattern;
 
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.ui.Component;
 import com.watabou.utils.Signal;
 
 public class GameLog extends Component implements Signal.Listener<String> {

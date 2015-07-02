@@ -20,6 +20,10 @@
  */
 package com.mrlolethan.butteredpd.items;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -44,10 +48,6 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class Item implements Bundlable {
 

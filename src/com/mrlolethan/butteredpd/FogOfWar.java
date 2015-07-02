@@ -24,11 +24,11 @@ import java.util.Arrays;
 
 import android.graphics.Bitmap;
 
+import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.glwrap.Texture;
 import com.watabou.noosa.Image;
-import com.mrlolethan.butteredpd.scenes.GameScene;
 
 public class FogOfWar extends Image {
 

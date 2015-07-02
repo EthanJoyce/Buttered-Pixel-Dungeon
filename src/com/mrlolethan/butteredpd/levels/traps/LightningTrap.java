@@ -20,10 +20,11 @@
  */
 package com.mrlolethan.butteredpd.levels.traps;
 
-import com.mrlolethan.butteredpd.actors.Actor;
-import com.watabou.noosa.Camera;
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ResultDescriptions;
+import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Lightning;
@@ -31,9 +32,8 @@ import com.mrlolethan.butteredpd.effects.particles.SparkParticle;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
 
 public class LightningTrap extends Trap {
 

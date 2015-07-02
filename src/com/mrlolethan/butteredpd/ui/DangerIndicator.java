@@ -20,12 +20,12 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Image;
 
 public class DangerIndicator extends Tag {
 	

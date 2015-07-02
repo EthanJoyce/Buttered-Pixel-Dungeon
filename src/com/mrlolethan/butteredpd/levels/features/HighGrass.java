@@ -36,7 +36,6 @@ import com.mrlolethan.butteredpd.items.artifacts.SandalsOfNature;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.plants.BlandfruitBush;
-import com.mrlolethan.butteredpd.plants.Plant;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.watabou.utils.Random;
 

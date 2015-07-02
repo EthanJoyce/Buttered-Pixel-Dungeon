@@ -21,13 +21,7 @@
 package com.mrlolethan.butteredpd.items.wands;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
-import com.mrlolethan.butteredpd.items.weapon.enchantments.Shock;
-import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
-import com.mrlolethan.butteredpd.mechanics.Ballistica;
-import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
-import com.watabou.noosa.Camera;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ResultDescriptions;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -35,10 +29,15 @@ import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Lightning;
 import com.mrlolethan.butteredpd.effects.particles.SparkParticle;
+import com.mrlolethan.butteredpd.items.weapon.enchantments.Shock;
+import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.traps.LightningTrap;
+import com.mrlolethan.butteredpd.mechanics.Ballistica;
+import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 

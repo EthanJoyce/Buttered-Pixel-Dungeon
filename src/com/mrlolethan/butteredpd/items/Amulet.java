@@ -23,13 +23,13 @@ package com.mrlolethan.butteredpd.items;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.watabou.noosa.Game;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Statistics;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.scenes.AmuletScene;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
+import com.watabou.noosa.Game;
 
 public class Amulet extends Item {
 	

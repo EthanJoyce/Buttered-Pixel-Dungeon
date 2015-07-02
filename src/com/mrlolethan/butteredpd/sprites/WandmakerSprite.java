@@ -24,12 +24,12 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.Halo;
 import com.mrlolethan.butteredpd.effects.particles.ElmoParticle;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.utils.PointF;
 
 public class WandmakerSprite extends MobSprite {

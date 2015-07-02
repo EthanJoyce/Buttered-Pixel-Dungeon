@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
+import com.mrlolethan.butteredpd.Assets;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
-import com.mrlolethan.butteredpd.Assets;
 import com.watabou.utils.PointF;
 
 public class BadgeBanner extends Image {

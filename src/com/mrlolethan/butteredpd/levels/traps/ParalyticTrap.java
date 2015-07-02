@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.levels.traps;
 
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.blobs.ParalyticGas;
 import com.mrlolethan.butteredpd.scenes.GameScene;

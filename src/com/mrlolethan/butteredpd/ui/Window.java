@@ -23,6 +23,9 @@ package com.mrlolethan.butteredpd.ui;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.mrlolethan.butteredpd.Chrome;
+import com.mrlolethan.butteredpd.effects.ShadowBox;
+import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.watabou.input.Keys;
 import com.watabou.input.Keys.Key;
 import com.watabou.input.Touchscreen.Touch;
@@ -31,9 +34,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.TouchArea;
-import com.mrlolethan.butteredpd.Chrome;
-import com.mrlolethan.butteredpd.effects.ShadowBox;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.watabou.utils.Signal;
 
 public class Window extends Group implements Signal.Listener<Key> {

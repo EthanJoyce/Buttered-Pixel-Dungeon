@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.actors.buffs;
 
-import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 
 public class Bless extends FlavourBuff {

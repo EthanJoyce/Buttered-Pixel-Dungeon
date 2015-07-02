@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 
 import java.util.HashSet;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ResultDescriptions;
@@ -34,6 +33,7 @@ import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.sprites.SkeletonSprite;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Skeleton extends Mob {

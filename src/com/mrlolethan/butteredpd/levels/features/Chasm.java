@@ -20,11 +20,6 @@
  */
 package com.mrlolethan.butteredpd.levels.features;
 
-import com.mrlolethan.butteredpd.items.artifacts.DriedRose;
-import com.mrlolethan.butteredpd.items.artifacts.TimekeepersHourglass;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -33,14 +28,18 @@ import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Cripple;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
+import com.mrlolethan.butteredpd.items.artifacts.DriedRose;
+import com.mrlolethan.butteredpd.items.artifacts.TimekeepersHourglass;
 import com.mrlolethan.butteredpd.levels.RegularLevel;
 import com.mrlolethan.butteredpd.levels.Room;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.scenes.InterlevelScene;
 import com.mrlolethan.butteredpd.sprites.MobSprite;
 import com.mrlolethan.butteredpd.utils.GLog;
-import com.mrlolethan.butteredpd.utils.Utils;
 import com.mrlolethan.butteredpd.windows.WndOptions;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Chasm {

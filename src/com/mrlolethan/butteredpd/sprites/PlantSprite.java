@@ -20,14 +20,13 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.plants.Plant;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
 
 public class PlantSprite extends Image {
 

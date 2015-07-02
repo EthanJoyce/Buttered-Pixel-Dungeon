@@ -20,10 +20,6 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.NinePatch;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Chrome;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -35,6 +31,10 @@ import com.mrlolethan.butteredpd.ui.ItemSlot;
 import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.ui.Component;
 
 public class WndBlacksmith extends Window {
 

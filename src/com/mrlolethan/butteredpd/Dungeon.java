@@ -20,6 +20,13 @@
  */
 package com.mrlolethan.butteredpd;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Amok;
@@ -64,13 +71,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class Dungeon {
 
@@ -292,7 +292,6 @@ public class Dungeon {
 		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 25;
 	}
 	
-	@SuppressWarnings("deprecation")
 	public static void switchLevel( final Level level, int pos ) {
 		
 		Dungeon.level = level;

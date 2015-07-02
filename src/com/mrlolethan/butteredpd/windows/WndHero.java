@@ -22,14 +22,6 @@ package com.mrlolethan.butteredpd.windows;
 
 import java.util.Locale;
 
-import com.mrlolethan.butteredpd.sprites.HeroSprite;
-import com.mrlolethan.butteredpd.ui.Window;
-import com.watabou.gltextures.SmartTexture;
-import com.watabou.gltextures.TextureCache;
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Group;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Statistics;
@@ -37,9 +29,17 @@ import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
+import com.mrlolethan.butteredpd.sprites.HeroSprite;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.ui.RedButton;
+import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.gltextures.SmartTexture;
+import com.watabou.gltextures.TextureCache;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Group;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.ui.Button;
 
 public class WndHero extends WndTabbed {
@@ -54,7 +54,7 @@ public class WndHero extends WndTabbed {
 	private static final String TXT_DEPTH	= "Maximum Depth";
 	
 	private static final int WIDTH		= 100;
-	private static final int TAB_WIDTH	= 40;
+	//private static final int TAB_WIDTH	= 40;
 	
 	private StatsTab stats;
 	private BuffsTab buffs;

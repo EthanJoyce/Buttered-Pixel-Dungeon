@@ -33,10 +33,20 @@ import com.mrlolethan.butteredpd.items.potions.PotionOfMight;
 import com.mrlolethan.butteredpd.items.potions.PotionOfStrength;
 import com.mrlolethan.butteredpd.items.rings.Ring;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicalInfusion;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.wands.Wand;
-import com.mrlolethan.butteredpd.items.weapon.melee.*;
+import com.mrlolethan.butteredpd.items.weapon.melee.BattleAxe;
+import com.mrlolethan.butteredpd.items.weapon.melee.Dagger;
+import com.mrlolethan.butteredpd.items.weapon.melee.Glaive;
+import com.mrlolethan.butteredpd.items.weapon.melee.Knuckles;
+import com.mrlolethan.butteredpd.items.weapon.melee.Longsword;
+import com.mrlolethan.butteredpd.items.weapon.melee.Mace;
+import com.mrlolethan.butteredpd.items.weapon.melee.MeleeWeapon;
+import com.mrlolethan.butteredpd.items.weapon.melee.Quarterstaff;
+import com.mrlolethan.butteredpd.items.weapon.melee.Spear;
+import com.mrlolethan.butteredpd.items.weapon.melee.Sword;
+import com.mrlolethan.butteredpd.items.weapon.melee.WarHammer;
 import com.mrlolethan.butteredpd.plants.Plant;
 
 public class WaterOfTransmutation extends WellWater {

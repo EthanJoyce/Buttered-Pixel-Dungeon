@@ -23,13 +23,12 @@ package com.mrlolethan.butteredpd.actors.buffs;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.particles.FlameParticle;
+import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.HashSet;
 
 public class FireImbue extends Buff {
 
@@ -59,7 +58,7 @@ public class FireImbue extends Buff {
 	@Override
 	public boolean act() {
 		if (Dungeon.level.map[target.pos] == Terrain.GRASS) {
-			Dungeon.level.set(target.pos, Terrain.EMBERS);
+			Level.set(target.pos, Terrain.EMBERS);
 			GameScene.updateMap(target.pos);
 		}
 

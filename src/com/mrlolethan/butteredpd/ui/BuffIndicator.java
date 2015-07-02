@@ -20,6 +20,10 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.actors.Char;
+import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.windows.WndInfoBuff;
 import com.watabou.gltextures.SmartTexture;
@@ -29,10 +33,6 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.Char;
-import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.watabou.utils.SparseArray;
 
 public class BuffIndicator extends Component {

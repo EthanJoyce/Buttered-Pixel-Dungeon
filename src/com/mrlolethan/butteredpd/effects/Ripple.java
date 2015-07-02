@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.levels.Level;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 
 public class Ripple extends Image {
 

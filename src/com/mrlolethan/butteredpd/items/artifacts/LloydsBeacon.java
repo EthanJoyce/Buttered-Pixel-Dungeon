@@ -21,6 +21,8 @@
 package com.mrlolethan.butteredpd.items.artifacts;
 //If it weren't super obvious, this is going to become an artifact soon.
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -45,8 +47,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
-
-import java.util.ArrayList;
 
 public class LloydsBeacon extends Artifact {
 

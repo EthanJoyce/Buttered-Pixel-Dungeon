@@ -21,8 +21,8 @@
 package com.mrlolethan.butteredpd.effects.particles;
 
 import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.noosa.particles.Emitter.Factory;
+import com.watabou.noosa.particles.PixelParticle;
 
 public class FlameParticle extends PixelParticle.Shrinking {
 	

@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Visual;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Visual;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 

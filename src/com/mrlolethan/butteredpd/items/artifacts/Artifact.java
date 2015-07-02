@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.artifacts;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
@@ -30,8 +32,6 @@ import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
 
 public class Artifact extends KindofMisc {
 

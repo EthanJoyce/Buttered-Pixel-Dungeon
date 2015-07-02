@@ -21,10 +21,10 @@
 package com.mrlolethan.butteredpd.sprites;
 
 import com.mrlolethan.butteredpd.Assets;
-import com.watabou.noosa.TextureFilm;
-import com.watabou.noosa.particles.Emitter;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.particles.Emitter;
 
 public class FetidRatSprite extends MobSprite {
 	

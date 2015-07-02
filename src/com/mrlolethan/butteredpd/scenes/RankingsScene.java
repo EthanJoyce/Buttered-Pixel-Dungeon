@@ -20,12 +20,6 @@
  */
 package com.mrlolethan.butteredpd.scenes;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.ui.Button;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Rankings;
@@ -38,6 +32,12 @@ import com.mrlolethan.butteredpd.ui.Icons;
 import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.windows.WndError;
 import com.mrlolethan.butteredpd.windows.WndRanking;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.audio.Music;
+import com.watabou.noosa.ui.Button;
 import com.watabou.utils.GameMath;
 
 public class RankingsScene extends PixelScene {

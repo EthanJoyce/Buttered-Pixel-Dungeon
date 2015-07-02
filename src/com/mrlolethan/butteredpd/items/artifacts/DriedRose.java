@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.artifacts;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -44,9 +47,6 @@ import com.mrlolethan.butteredpd.windows.WndQuest;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.HashSet;
 
 public class DriedRose extends Artifact {
 
@@ -114,7 +114,7 @@ public class DriedRose extends Artifact {
 					hero.sprite.operate(hero.pos);
 
 					if (!firstSummon) {
-						ghost.yell(ghost.VOICE_HELLO + Dungeon.hero.givenName());
+						ghost.yell(GhostHero.VOICE_HELLO + Dungeon.hero.givenName());
 						Sample.INSTANCE.play( Assets.SND_GHOST );
 						firstSummon = true;
 					} else

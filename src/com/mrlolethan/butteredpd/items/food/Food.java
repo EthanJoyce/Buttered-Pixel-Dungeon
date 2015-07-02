@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.food;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Statistics;
@@ -33,8 +35,6 @@ import com.mrlolethan.butteredpd.items.scrolls.ScrollOfRecharging;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.noosa.audio.Sample;
-
-import java.util.ArrayList;
 
 public class Food extends Item {
 

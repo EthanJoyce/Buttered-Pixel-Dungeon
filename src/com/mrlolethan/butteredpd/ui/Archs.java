@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.Assets;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.Assets;
 
 public class Archs extends Component {
 

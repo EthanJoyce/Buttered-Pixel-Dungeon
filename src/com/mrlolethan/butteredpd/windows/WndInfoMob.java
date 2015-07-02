@@ -20,14 +20,14 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.ui.HealthBar;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.ui.Component;
 
 public class WndInfoMob extends WndTitledMessage {
 	

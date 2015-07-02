@@ -25,7 +25,6 @@ import com.mrlolethan.butteredpd.ResultDescriptions;
 import com.mrlolethan.butteredpd.effects.Splash;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.utils.GLog;
-import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;

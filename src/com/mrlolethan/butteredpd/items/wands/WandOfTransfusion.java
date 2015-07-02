@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.wands;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
@@ -29,7 +32,15 @@ import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Charm;
 import com.mrlolethan.butteredpd.actors.buffs.Corruption;
-import com.mrlolethan.butteredpd.actors.mobs.*;
+import com.mrlolethan.butteredpd.actors.mobs.King;
+import com.mrlolethan.butteredpd.actors.mobs.Mob;
+import com.mrlolethan.butteredpd.actors.mobs.Monk;
+import com.mrlolethan.butteredpd.actors.mobs.Senior;
+import com.mrlolethan.butteredpd.actors.mobs.Skeleton;
+import com.mrlolethan.butteredpd.actors.mobs.Succubus;
+import com.mrlolethan.butteredpd.actors.mobs.Warlock;
+import com.mrlolethan.butteredpd.actors.mobs.Wraith;
+import com.mrlolethan.butteredpd.actors.mobs.Yog;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Ghost;
 import com.mrlolethan.butteredpd.effects.Beam;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
@@ -42,6 +53,7 @@ import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.rings.Ring;
 import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
+import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.mechanics.Ballistica;
 import com.mrlolethan.butteredpd.plants.Plant;
@@ -56,9 +68,6 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
-import java.util.Arrays;
-import java.util.HashSet;
-
 public class WandOfTransfusion extends Wand {
 
 	{
@@ -71,7 +80,7 @@ public class WandOfTransfusion extends Wand {
 	private boolean freeCharge = false;
 
 	//FIXME: this is sloppy
-	private static HashSet<Class> undeadMobs = new HashSet<Class>(Arrays.asList(
+	private static HashSet<Class<?>> undeadMobs = new HashSet<Class<?>>(Arrays.asList(
 			//Any Location
 			Wraith.class,
 			//Sewers
@@ -160,7 +169,7 @@ public class WandOfTransfusion extends Wand {
 		} else if (Dungeon.level.map[cell] == Terrain.GRASS) {
 
 			//regrow one grass tile, suuuuuper useful...
-			Dungeon.level.set(cell, Terrain.HIGH_GRASS);
+			Level.set(cell, Terrain.HIGH_GRASS);
 			GameScene.updateMap(cell);
 			CellEmitter.get( cell ).burst(LeafParticle.LEVEL_SPECIFIC, 4);
 
@@ -173,7 +182,7 @@ public class WandOfTransfusion extends Wand {
 				CellEmitter.get( cell ).burst(LeafParticle.LEVEL_SPECIFIC, 8);
 				GameScene.updateMap(cell);
 			} else{
-				Dungeon.level.set(cell, Terrain.HIGH_GRASS);
+				Level.set(cell, Terrain.HIGH_GRASS);
 				GameScene.updateMap(cell);
 				CellEmitter.get( cell ).burst(LeafParticle.LEVEL_SPECIFIC, 4);
 			}

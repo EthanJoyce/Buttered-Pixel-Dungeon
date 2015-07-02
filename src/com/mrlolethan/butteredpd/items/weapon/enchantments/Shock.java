@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.items.weapon.enchantments;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -84,7 +83,6 @@ public class Shock extends Weapon.Enchantment {
 		ch.sprite.centerEmitter().burst(SparkParticle.FACTORY, 3);
 		ch.sprite.flash();
 		
-		HashSet<Char> ns = new HashSet<Char>();
 		for (int i=0; i < Level.NEIGHBOURS8.length; i++) {
 			Char n = Actor.findChar( ch.pos + Level.NEIGHBOURS8[i] );
 			if (n != null && !affected.contains( n )) {

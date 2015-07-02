@@ -22,9 +22,8 @@ package com.mrlolethan.butteredpd.windows;
 
 import java.io.IOException;
 
-import com.watabou.noosa.Game;
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.scenes.InterlevelScene;
 import com.mrlolethan.butteredpd.scenes.RankingsScene;
@@ -32,6 +31,7 @@ import com.mrlolethan.butteredpd.scenes.TitleScene;
 import com.mrlolethan.butteredpd.ui.Icons;
 import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.Game;
 
 public class WndGame extends Window {
 	

@@ -24,13 +24,6 @@ import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLES20;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.audio.Music;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.ui.Button;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.effects.BannerSprites;
@@ -38,6 +31,13 @@ import com.mrlolethan.butteredpd.effects.Fireball;
 import com.mrlolethan.butteredpd.ui.Archs;
 import com.mrlolethan.butteredpd.ui.ExitButton;
 import com.mrlolethan.butteredpd.ui.PrefsButton;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.audio.Music;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.ui.Button;
 
 public class TitleScene extends PixelScene {
 

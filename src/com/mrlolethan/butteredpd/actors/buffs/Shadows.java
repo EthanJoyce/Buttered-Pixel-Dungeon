@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.actors.buffs;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
 public class Shadows extends Invisibility {

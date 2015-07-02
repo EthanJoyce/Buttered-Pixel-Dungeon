@@ -21,14 +21,14 @@
 package com.mrlolethan.butteredpd.windows;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-import com.watabou.input.Touchscreen.Touch;
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.TouchArea;
 import com.mrlolethan.butteredpd.Chrome;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.input.Touchscreen.Touch;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.TouchArea;
 import com.watabou.utils.SparseArray;
 
 public class WndStory extends Window {

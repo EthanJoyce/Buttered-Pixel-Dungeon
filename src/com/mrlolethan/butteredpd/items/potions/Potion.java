@@ -23,15 +23,14 @@ package com.mrlolethan.butteredpd.items.potions;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Badges;
+import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.blobs.Fire;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Burning;
-import com.watabou.noosa.audio.Sample;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Badges;
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.effects.Splash;
 import com.mrlolethan.butteredpd.items.Item;
@@ -43,6 +42,7 @@ import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.windows.WndOptions;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
 public class Potion extends Item {

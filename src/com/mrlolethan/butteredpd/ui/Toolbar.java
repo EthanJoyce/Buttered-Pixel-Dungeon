@@ -20,15 +20,8 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-import com.mrlolethan.butteredpd.levels.traps.Trap;
-import com.mrlolethan.butteredpd.windows.WndInfoTrap;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.ui.Button;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -36,26 +29,32 @@ import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.levels.Level;
+import com.mrlolethan.butteredpd.levels.traps.Trap;
 import com.mrlolethan.butteredpd.plants.Plant;
 import com.mrlolethan.butteredpd.scenes.CellSelector;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
+import com.mrlolethan.butteredpd.windows.WndBag;
 import com.mrlolethan.butteredpd.windows.WndCatalogus;
 import com.mrlolethan.butteredpd.windows.WndHero;
 import com.mrlolethan.butteredpd.windows.WndInfoCell;
 import com.mrlolethan.butteredpd.windows.WndInfoItem;
 import com.mrlolethan.butteredpd.windows.WndInfoMob;
 import com.mrlolethan.butteredpd.windows.WndInfoPlant;
-import com.mrlolethan.butteredpd.windows.WndBag;
+import com.mrlolethan.butteredpd.windows.WndInfoTrap;
 import com.mrlolethan.butteredpd.windows.WndMessage;
 import com.mrlolethan.butteredpd.windows.WndTradeItem;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Gizmo;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.ui.Button;
+import com.watabou.noosa.ui.Component;
 
 public class Toolbar extends Component {
 
 	private Tool btnWait;
 	private Tool btnSearch;
 	private Tool btnInfo;
-	private Tool btnResume;
 	private Tool btnInventory;
 	private Tool btnQuick;
 	private Tool btnQuick2;

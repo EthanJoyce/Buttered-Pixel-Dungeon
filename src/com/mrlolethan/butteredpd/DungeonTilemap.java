@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd;
 
+import com.mrlolethan.butteredpd.levels.Level;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.Tilemap;
 import com.watabou.noosa.tweeners.AlphaTweener;
-import com.mrlolethan.butteredpd.levels.Level;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 

@@ -27,10 +27,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import com.mrlolethan.butteredpd.actors.hero.Hero;
-import com.watabou.noosa.Game;
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.Game;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.SystemTime;

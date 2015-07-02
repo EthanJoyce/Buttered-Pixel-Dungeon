@@ -20,14 +20,14 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Group;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.actors.hero.HeroSubClass;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Group;
 
 public class WndClass extends WndTabbed {
 

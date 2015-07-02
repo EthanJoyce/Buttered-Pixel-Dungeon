@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.scrolls;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.actors.buffs.Blindness;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -29,9 +32,6 @@ import com.mrlolethan.butteredpd.items.artifacts.UnstableSpellbook;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.utils.Bundle;
-
-import java.util.ArrayList;
-import java.util.HashSet;
 
 public abstract class Scroll extends Item {
 

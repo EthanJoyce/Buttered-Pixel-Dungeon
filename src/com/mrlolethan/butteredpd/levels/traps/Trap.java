@@ -22,9 +22,6 @@ package com.mrlolethan.butteredpd.levels.traps;
 
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.levels.Level;
-import com.mrlolethan.butteredpd.levels.Terrain;
-import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.TrapSprite;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;

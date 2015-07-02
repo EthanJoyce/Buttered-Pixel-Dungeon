@@ -26,8 +26,6 @@ import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
 
-import java.util.HashSet;
-
 public class ToxicImbue extends Buff {
 
 	public static final float DURATION	= 30f;

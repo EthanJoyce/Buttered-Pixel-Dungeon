@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.actors.blobs;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Journal;
@@ -35,6 +34,7 @@ import com.mrlolethan.butteredpd.items.DewVial;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.potions.PotionOfHealing;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 
 public class WaterOfHealth extends WellWater {
 

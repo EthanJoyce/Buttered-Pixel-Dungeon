@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.wands;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -41,9 +44,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-import java.util.Arrays;
-import java.util.HashSet;
-
 //TODO: balancing
 public class WandOfCorruption extends Wand {
 
@@ -53,7 +53,7 @@ public class WandOfCorruption extends Wand {
 	}
 
 	//FIXME: sloppy
-	private static HashSet<Class> bosses = new HashSet<Class>(Arrays.asList(
+	private static HashSet<Class<?>> bosses = new HashSet<Class<?>>(Arrays.asList(
 			Ghost.FetidRat.class, Ghost.GnollTrickster.class, Ghost.GreatCrab.class,
 			Goo.class, Tengu.class, DM300.class, King.class,
 			Yog.class, Yog.BurningFist.class, Yog.RottingFist.class

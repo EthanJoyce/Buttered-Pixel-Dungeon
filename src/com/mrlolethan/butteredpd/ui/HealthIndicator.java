@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.actors.Char;
+import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.actors.Char;
-import com.mrlolethan.butteredpd.sprites.CharSprite;
 
 public class HealthIndicator extends Component {
 

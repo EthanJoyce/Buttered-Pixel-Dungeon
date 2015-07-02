@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.tweeners.AlphaTweener;
-import com.watabou.noosa.tweeners.ScaleTweener;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
+import com.watabou.noosa.tweeners.AlphaTweener;
+import com.watabou.noosa.tweeners.ScaleTweener;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 

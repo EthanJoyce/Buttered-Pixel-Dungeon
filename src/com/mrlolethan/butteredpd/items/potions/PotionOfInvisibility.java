@@ -20,14 +20,14 @@
  */
 package com.mrlolethan.butteredpd.items.potions;
 
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.tweeners.AlphaTweener;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.tweeners.AlphaTweener;
 
 public class PotionOfInvisibility extends Potion {
 

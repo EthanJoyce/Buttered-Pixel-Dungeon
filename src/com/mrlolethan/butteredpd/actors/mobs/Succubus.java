@@ -23,8 +23,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfTeleportation;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -34,10 +32,12 @@ import com.mrlolethan.butteredpd.actors.buffs.Light;
 import com.mrlolethan.butteredpd.actors.buffs.Sleep;
 import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfLullaby;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfTeleportation;
 import com.mrlolethan.butteredpd.items.weapon.enchantments.Leech;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.mechanics.Ballistica;
 import com.mrlolethan.butteredpd.sprites.SuccubusSprite;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Succubus extends Mob {

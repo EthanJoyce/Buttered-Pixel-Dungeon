@@ -20,7 +20,15 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
-import com.mrlolethan.butteredpd.levels.traps.*;
+import com.mrlolethan.butteredpd.levels.traps.AlarmTrap;
+import com.mrlolethan.butteredpd.levels.traps.FireTrap;
+import com.mrlolethan.butteredpd.levels.traps.GrippingTrap;
+import com.mrlolethan.butteredpd.levels.traps.LightningTrap;
+import com.mrlolethan.butteredpd.levels.traps.ParalyticTrap;
+import com.mrlolethan.butteredpd.levels.traps.PoisonTrap;
+import com.mrlolethan.butteredpd.levels.traps.SummoningTrap;
+import com.mrlolethan.butteredpd.levels.traps.ToxicTrap;
+import com.mrlolethan.butteredpd.levels.traps.Trap;
 import com.watabou.utils.SparseArray;
 
 public class Terrain {

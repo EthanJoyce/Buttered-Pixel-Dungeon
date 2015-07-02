@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 
 import java.util.HashSet;
 
-import com.watabou.noosa.tweeners.AlphaTweener;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -32,6 +31,7 @@ import com.mrlolethan.butteredpd.items.weapon.enchantments.Death;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.WraithSprite;
+import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

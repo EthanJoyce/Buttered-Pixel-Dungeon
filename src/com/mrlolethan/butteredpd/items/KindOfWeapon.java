@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.items;
 
 import java.util.ArrayList;
 
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.utils.GLog;

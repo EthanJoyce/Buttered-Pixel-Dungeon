@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-		import com.watabou.noosa.Game;
-		import com.watabou.noosa.Image;
-		import com.watabou.noosa.audio.Sample;
-		import com.watabou.noosa.ui.Button;
 		import com.mrlolethan.butteredpd.Assets;
-		import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-		import com.mrlolethan.butteredpd.scenes.TitleScene;
+import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.scenes.TitleScene;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.ui.Button;
 
 public class ExitButton extends Button {
 

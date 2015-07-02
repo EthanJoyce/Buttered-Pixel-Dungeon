@@ -38,7 +38,7 @@ public class ItemSpriteSheet {
 	private static final int ROW13 = 12*16;
 	private static final int ROW14 = 13*16;
 	private static final int ROW15 = 14*16;
-	private static final int ROW16 = 15*16;
+	//private static final int ROW16 = 15*16;
 
 	//Row One: Items which can't be obtained
 	//null warning occupies space 0, should only show up if there's a bug.

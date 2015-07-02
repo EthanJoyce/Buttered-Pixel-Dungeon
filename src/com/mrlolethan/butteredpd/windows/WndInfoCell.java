@@ -20,8 +20,6 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
@@ -29,6 +27,8 @@ import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Image;
 
 public class WndInfoCell extends Window {
 	

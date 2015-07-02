@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Image;
 import com.watabou.utils.PointF;
 
 public class Compass extends Image {

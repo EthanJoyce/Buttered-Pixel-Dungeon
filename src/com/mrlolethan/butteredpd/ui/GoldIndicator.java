@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
 
 public class GoldIndicator extends Component {
 

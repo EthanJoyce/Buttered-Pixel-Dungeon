@@ -20,8 +20,8 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
+import com.watabou.noosa.TextureFilm;
 import com.watabou.utils.Random;
 
 public class SeniorSprite extends MobSprite {

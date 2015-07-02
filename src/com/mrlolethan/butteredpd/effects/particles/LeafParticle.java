@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.effects.particles;
 
-import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.particles.PixelParticle;
-import com.watabou.noosa.particles.Emitter.Factory;
 import com.mrlolethan.butteredpd.Dungeon;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.particles.Emitter.Factory;
+import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.Random;
 

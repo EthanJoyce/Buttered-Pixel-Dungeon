@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.actors.buffs;
 
+import java.text.DecimalFormat;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -32,8 +34,6 @@ import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.utils.Random;
-
-import java.text.DecimalFormat;
 
 public class Chill extends FlavourBuff {
 

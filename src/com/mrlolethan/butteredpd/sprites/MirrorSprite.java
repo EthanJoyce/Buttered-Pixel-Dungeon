@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.MirrorImage;
+import com.watabou.noosa.TextureFilm;
 
 public class MirrorSprite extends MobSprite {
 	

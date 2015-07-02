@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.actors.mobs;
 
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -47,8 +49,6 @@ import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.HashSet;
 
 public abstract class Mob extends Char {
 

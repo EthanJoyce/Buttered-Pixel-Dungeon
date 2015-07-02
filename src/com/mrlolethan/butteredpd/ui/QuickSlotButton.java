@@ -20,17 +20,17 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.mrlolethan.butteredpd.items.EquipableItem;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.ui.Button;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
+import com.mrlolethan.butteredpd.items.EquipableItem;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.windows.WndBag;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.ui.Button;
 
 public class QuickSlotButton extends Button implements WndBag.Listener {
 

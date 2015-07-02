@@ -21,11 +21,11 @@
 package com.mrlolethan.butteredpd.windows;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.scenes.PixelScene;
+import com.mrlolethan.butteredpd.ui.Window;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
-import com.mrlolethan.butteredpd.ui.Window;
 
 public class WndTitledMessage extends Window {
 

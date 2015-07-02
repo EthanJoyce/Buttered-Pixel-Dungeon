@@ -20,16 +20,15 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.mrlolethan.butteredpd.actors.mobs.Mob;
-import com.mrlolethan.butteredpd.items.artifacts.MasterThievesArmband;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Shopkeeper;
 import com.mrlolethan.butteredpd.items.EquipableItem;
 import com.mrlolethan.butteredpd.items.Gold;
 import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Item;
+import com.mrlolethan.butteredpd.items.artifacts.MasterThievesArmband;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.ui.ItemSlot;
@@ -37,6 +36,7 @@ import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapTextMultiline;
 
 public class WndTradeItem extends Window {
 	
@@ -166,7 +166,7 @@ public class WndTradeItem extends Window {
 						} else {
 							for (Mob mob : Dungeon.level.mobs){
 								if (mob instanceof Shopkeeper) {
-									mob.yell(((Shopkeeper) mob).TXT_THIEF);
+									mob.yell(Shopkeeper.TXT_THIEF);
 									((Shopkeeper) mob).flee();
 									break;
 								}

@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Bones;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -34,9 +37,6 @@ import com.watabou.noosa.Scene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class SewerBossLevel extends RegularLevel {
 

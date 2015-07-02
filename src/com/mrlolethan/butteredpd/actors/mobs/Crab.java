@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.actors.mobs;
 
 import com.mrlolethan.butteredpd.actors.Char;
-import com.mrlolethan.butteredpd.actors.mobs.npcs.Ghost;
 import com.mrlolethan.butteredpd.items.food.MysteryMeat;
 import com.mrlolethan.butteredpd.sprites.CrabSprite;
 import com.watabou.utils.Random;

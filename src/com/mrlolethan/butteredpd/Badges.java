@@ -29,9 +29,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import com.mrlolethan.butteredpd.items.artifacts.Artifact;
-import com.mrlolethan.butteredpd.items.bags.PotionBandolier;
-import com.watabou.noosa.Game;
 import com.mrlolethan.butteredpd.actors.mobs.Acidic;
 import com.mrlolethan.butteredpd.actors.mobs.Albino;
 import com.mrlolethan.butteredpd.actors.mobs.Bandit;
@@ -39,15 +36,17 @@ import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.actors.mobs.Senior;
 import com.mrlolethan.butteredpd.actors.mobs.Shielded;
 import com.mrlolethan.butteredpd.items.Item;
+import com.mrlolethan.butteredpd.items.artifacts.Artifact;
+import com.mrlolethan.butteredpd.items.bags.PotionBandolier;
 import com.mrlolethan.butteredpd.items.bags.ScrollHolder;
 import com.mrlolethan.butteredpd.items.bags.SeedPouch;
 import com.mrlolethan.butteredpd.items.bags.WandHolster;
 import com.mrlolethan.butteredpd.items.potions.Potion;
 import com.mrlolethan.butteredpd.items.rings.Ring;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
-import com.mrlolethan.butteredpd.items.wands.Wand;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 

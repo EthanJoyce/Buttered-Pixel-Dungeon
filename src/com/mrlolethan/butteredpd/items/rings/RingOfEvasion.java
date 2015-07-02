@@ -48,12 +48,10 @@ public class RingOfEvasion extends Ring {
 	//yup, the only ring in the game with logic inside of its class
 	public class Evasion extends RingBuff {
 		public int effectiveLevel;
-		private int pos;
 
 		@Override
 		public boolean attachTo( Char target ) {
 
-			pos = target.pos;
 			effectiveLevel = Math.min(0, level);
 			return super.attachTo(target);
 		}

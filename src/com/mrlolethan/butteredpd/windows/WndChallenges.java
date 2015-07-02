@@ -22,12 +22,12 @@ package com.mrlolethan.butteredpd.windows;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.BitmapText;
-import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.CheckBox;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapText;
 
 public class WndChallenges extends Window {
 

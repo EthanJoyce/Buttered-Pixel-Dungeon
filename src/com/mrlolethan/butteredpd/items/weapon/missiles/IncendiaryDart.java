@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.weapon.missiles;
 
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
@@ -28,7 +27,6 @@ import com.mrlolethan.butteredpd.actors.blobs.Fire;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Burning;
 import com.mrlolethan.butteredpd.items.Item;
-import com.mrlolethan.butteredpd.items.rings.RingOfSharpshooting;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;

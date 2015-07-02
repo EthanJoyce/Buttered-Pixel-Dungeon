@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.levels.painters;
 
-import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.mobs.Piranha;
 import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Heap;

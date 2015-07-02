@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.items.weapon.Weapon;
@@ -34,8 +36,6 @@ import com.mrlolethan.butteredpd.windows.IconTitle;
 import com.mrlolethan.butteredpd.windows.WndBag;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.audio.Sample;
-
-import java.util.ArrayList;
 
 public class Weightstone extends Item {
 
