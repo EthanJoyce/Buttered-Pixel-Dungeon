@@ -22,24 +22,26 @@ package com.mrlolethan.butteredpd.items;
 
 import java.util.ArrayList;
 
-import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.hero.HeroClass;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
 public class DewVial extends Item {
 
 	private static final int MAX_VOLUME	= 10;
 
+	private static final String AC_SIP	= "SIP";
 	private static final String AC_DRINK	= "DRINK";
 
+	private static final float TIME_TO_SIP = 0.5f;
 	private static final float TIME_TO_DRINK = 1f;
 
 	private static final String TXT_VALUE	= "%+dHP";
@@ -79,6 +81,7 @@ public class DewVial extends Item {
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
 		if (volume > 0) {
+			actions.add(AC_SIP);
 			actions.add( AC_DRINK );
 		}
 		return actions;
@@ -116,6 +119,33 @@ public class DewVial extends Item {
 
 			} else {
 				GLog.w( TXT_EMPTY );
+			}
+
+		} else if (action.equals(AC_SIP)) {
+
+			if (this.volume > 0) {
+				// Exact same as picking up a Dewdrop
+				int value = 1 + (Dungeon.depth - 1) / 5;
+				if (hero.heroClass == HeroClass.HUNTRESS) {
+					value++;
+				}
+				
+				int effect = Math.min( hero.HT - hero.HP, value * quantity );
+				if (effect > 0) {
+					hero.HP += effect;
+					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+					hero.sprite.showStatus( CharSprite.POSITIVE, TXT_VALUE, effect );
+				}
+				
+				volume--;
+				
+				hero.spend( TIME_TO_SIP );
+				hero.busy();
+				
+				Sample.INSTANCE.play( Assets.SND_DRINK );
+				hero.sprite.operate( hero.pos );
+				
+				updateQuickslot();
 			}
 
 		} else {
