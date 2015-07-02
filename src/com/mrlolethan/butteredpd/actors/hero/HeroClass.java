@@ -57,7 +57,6 @@ public enum HeroClass {
 		"The Warrior starts with a unique short sword. This sword can be later \"reforged\" to upgrade another melee weapon.",
 		"The Warrior is less proficient with missile weapons.",
 		"Any piece of food restores some health when eaten.",
-		"Potions of Strength are identified from the beginning.",
 	};
 	
 	public static final String[] MAG_PERKS = {
@@ -65,7 +64,6 @@ public enum HeroClass {
 		"The Mage's staff can be used as a melee weapon or a more powerful wand.",
 		"The Mage partially identifies wands after using them.",
 		"When eaten, any piece of food restores 1 charge for all wands in the inventory.",
-		"Scrolls of Upgrade are identified from the beginning."
 	};
 	
 	public static final String[] ROG_PERKS = {
@@ -74,7 +72,6 @@ public enum HeroClass {
 		"The Rogue is proficient with light armor, dodging better with excess strength.",
 		"The Rogue is more proficient in detecting hidden doors and traps.",
 		"The Rogue can go without food longer.",
-		"Scrolls of Magic Mapping are identified from the beginning."
 	};
 	
 	public static final String[] HUN_PERKS = {
@@ -83,7 +80,6 @@ public enum HeroClass {
 		"The Huntress is able to recover a single used missile weapon from each enemy.",
 		"The Huntress gains more health from dewdrops.",
 		"The Huntress senses neighbouring monsters even if they are hidden behind obstacles.",
-		"Potions of Mind Vision are identified from the beginning."
 	};
 
 	public void initHero( Hero hero ) {

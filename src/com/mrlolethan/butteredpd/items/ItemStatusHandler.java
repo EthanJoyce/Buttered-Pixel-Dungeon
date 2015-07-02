@@ -138,7 +138,8 @@ public class ItemStatusHandler<T extends Item> {
 	}
 	
 	public boolean isKnown( T item ) {
-		return known.contains( item.getClass() );
+		return true; // All items are known by default.
+		//return known.contains( item.getClass() );
 	}
 	
 	@SuppressWarnings("unchecked")
