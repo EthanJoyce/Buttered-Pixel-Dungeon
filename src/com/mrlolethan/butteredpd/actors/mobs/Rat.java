@@ -21,6 +21,7 @@
 package com.mrlolethan.butteredpd.actors.mobs;
 
 import com.mrlolethan.butteredpd.actors.Char;
+import com.mrlolethan.butteredpd.items.food.MysteryMeat;
 import com.mrlolethan.butteredpd.sprites.RatSprite;
 import com.watabou.utils.Random;
 
@@ -34,6 +35,9 @@ public class Rat extends Mob {
 		defenseSkill = 3;
 		
 		maxLvl = 5;
+		
+		loot = new MysteryMeat();
+		lootChance = 0.167f;
 	}
 	
 	@Override
