@@ -52,13 +52,11 @@ public class ItemStatusHandler<T extends Item> {
 			
 			Class<? extends T> item = (Class<? extends T>)(items[i]);
 			
-			int index = Random.Int( labelsLeft.size() );
+			labels.put( item, labelsLeft.get( 0 ) );
+			labelsLeft.remove( 0 );
 			
-			labels.put( item, labelsLeft.get( index ) );
-			labelsLeft.remove( index );
-			
-			images.put( item, imagesLeft.get( index ) );
-			imagesLeft.remove( index );
+			images.put( item, imagesLeft.get( 0 ) );
+			imagesLeft.remove( 0 );
 		}
 	}
 	
