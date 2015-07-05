@@ -22,8 +22,8 @@ package com.mrlolethan.butteredpd.actors.blobs;
 
 import java.util.Arrays;
 
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.effects.BlobEmitter;
 import com.mrlolethan.butteredpd.levels.Level;

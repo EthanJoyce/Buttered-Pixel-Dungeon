@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -28,6 +27,7 @@ import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
+import com.watabou.noosa.audio.Sample;
 
 public class Dewdrop extends Item {
 

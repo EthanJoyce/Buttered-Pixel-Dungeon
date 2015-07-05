@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.actors;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 import android.util.SparseArray;
@@ -29,9 +28,7 @@ import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Statistics;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
-import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
-import com.mrlolethan.butteredpd.levels.Level;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 

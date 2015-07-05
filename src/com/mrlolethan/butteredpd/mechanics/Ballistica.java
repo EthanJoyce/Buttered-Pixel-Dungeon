@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.mechanics;
 
-import com.mrlolethan.butteredpd.actors.Actor;
-import com.mrlolethan.butteredpd.levels.Level;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import com.mrlolethan.butteredpd.actors.Actor;
+import com.mrlolethan.butteredpd.levels.Level;
 
 public class Ballistica {
 

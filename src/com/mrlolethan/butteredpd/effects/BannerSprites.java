@@ -20,8 +20,8 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Assets;
+import com.watabou.noosa.Image;
 
 public class BannerSprites {
 

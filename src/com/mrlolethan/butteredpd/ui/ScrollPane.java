@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.TouchArea;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.watabou.utils.Point;
 import com.watabou.utils.PointF;
 

@@ -20,20 +20,20 @@
  */
 package com.mrlolethan.butteredpd.scenes;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.NinePatch;
-import com.watabou.noosa.audio.Music;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
-import com.mrlolethan.butteredpd.Chrome;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.Chrome;
 import com.mrlolethan.butteredpd.ui.Archs;
 import com.mrlolethan.butteredpd.ui.BadgesList;
 import com.mrlolethan.butteredpd.ui.ExitButton;
 import com.mrlolethan.butteredpd.ui.ScrollPane;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.NinePatch;
+import com.watabou.noosa.audio.Music;
 import com.watabou.utils.Callback;
 
 public class BadgesScene extends PixelScene {

@@ -20,18 +20,10 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.mrlolethan.butteredpd.effects.DarkBlock;
-import com.mrlolethan.butteredpd.effects.particles.SnowParticle;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.MovieClip;
-import com.watabou.noosa.Visual;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.tweeners.PosTweener;
-import com.watabou.noosa.tweeners.Tweener;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.Char;
+import com.mrlolethan.butteredpd.effects.DarkBlock;
 import com.mrlolethan.butteredpd.effects.EmoIcon;
 import com.mrlolethan.butteredpd.effects.FloatingText;
 import com.mrlolethan.butteredpd.effects.IceBlock;
@@ -39,10 +31,18 @@ import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.effects.Splash;
 import com.mrlolethan.butteredpd.effects.TorchHalo;
 import com.mrlolethan.butteredpd.effects.particles.FlameParticle;
+import com.mrlolethan.butteredpd.effects.particles.SnowParticle;
 import com.mrlolethan.butteredpd.items.potions.PotionOfInvisibility;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.MovieClip;
+import com.watabou.noosa.Visual;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.tweeners.PosTweener;
+import com.watabou.noosa.tweeners.Tweener;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;

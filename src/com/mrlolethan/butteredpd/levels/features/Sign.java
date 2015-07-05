@@ -20,8 +20,6 @@
  */
 package com.mrlolethan.butteredpd.levels.features;
 
-import com.watabou.noosa.audio.Sample;
-import com.watabou.utils.Random;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
@@ -33,6 +31,8 @@ import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.windows.WndMessage;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Random;
 
 public class Sign {
 

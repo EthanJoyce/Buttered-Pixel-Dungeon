@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.artifacts;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -37,8 +39,6 @@ import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
 
 public class EtherealChains extends Artifact {
 

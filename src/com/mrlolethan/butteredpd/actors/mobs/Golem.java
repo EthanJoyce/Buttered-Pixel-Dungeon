@@ -27,7 +27,6 @@ import com.mrlolethan.butteredpd.actors.buffs.Amok;
 import com.mrlolethan.butteredpd.actors.buffs.Sleep;
 import com.mrlolethan.butteredpd.actors.buffs.Terror;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Imp;
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfPsionicBlast;
 import com.mrlolethan.butteredpd.sprites.GolemSprite;
 import com.watabou.utils.Random;
 

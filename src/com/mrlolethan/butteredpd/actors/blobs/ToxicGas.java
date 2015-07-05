@@ -29,7 +29,6 @@ import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.effects.BlobEmitter;
 import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.utils.GLog;
-import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Random;
 
 public class ToxicGas extends Blob implements Hero.Doom {

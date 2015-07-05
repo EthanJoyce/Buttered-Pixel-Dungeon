@@ -20,12 +20,12 @@
  */
 package com.mrlolethan.butteredpd.items.potions;
 
-import com.mrlolethan.butteredpd.Dungeon;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.blobs.ToxicGas;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.noosa.audio.Sample;
 
 public class PotionOfToxicGas extends Potion {
 

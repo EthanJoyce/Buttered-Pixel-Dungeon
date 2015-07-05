@@ -23,7 +23,6 @@ package com.mrlolethan.butteredpd.actors.mobs.npcs;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
-
 import com.mrlolethan.butteredpd.sprites.RatKingSprite;
 
 public class RatKing extends NPC {

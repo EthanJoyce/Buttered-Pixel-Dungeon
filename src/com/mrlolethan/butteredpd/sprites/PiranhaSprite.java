@@ -20,9 +20,9 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.noosa.TextureFilm;
 
 public class PiranhaSprite extends MobSprite {
 	

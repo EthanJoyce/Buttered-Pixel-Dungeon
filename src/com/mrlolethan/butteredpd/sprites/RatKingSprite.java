@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
-import com.mrlolethan.butteredpd.Assets;
-
 import java.util.Calendar;
+
+import com.mrlolethan.butteredpd.Assets;
+import com.watabou.noosa.TextureFilm;
 
 public class RatKingSprite extends MobSprite {
 

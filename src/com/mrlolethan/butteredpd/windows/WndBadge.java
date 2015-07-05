@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.effects.BadgeBanner;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Image;
 
 public class WndBadge extends Window {
 	

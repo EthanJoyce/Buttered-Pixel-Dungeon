@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.buffs.Bleeding;
 import com.mrlolethan.butteredpd.actors.buffs.Blindness;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Cripple;

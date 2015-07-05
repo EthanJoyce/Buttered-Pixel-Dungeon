@@ -20,14 +20,12 @@
  */
 package com.mrlolethan.butteredpd.levels.painters;
 
-import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Blacksmith;
 import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Room;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.levels.traps.FireTrap;
-import com.mrlolethan.butteredpd.levels.traps.Trap;
 import com.watabou.utils.Random;
 
 public class BlacksmithPainter extends Painter {

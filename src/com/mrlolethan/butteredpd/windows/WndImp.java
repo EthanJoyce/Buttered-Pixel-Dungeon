@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Imp;
@@ -32,6 +31,7 @@ import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapTextMultiline;
 
 public class WndImp extends Window {
 	

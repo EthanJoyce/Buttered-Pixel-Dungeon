@@ -24,17 +24,17 @@ import android.content.Intent;
 import android.net.Uri;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.effects.Flare;
+import com.mrlolethan.butteredpd.ui.Archs;
 import com.mrlolethan.butteredpd.ui.ExitButton;
+import com.mrlolethan.butteredpd.ui.Icons;
+import com.mrlolethan.butteredpd.ui.Window;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TouchArea;
-import com.mrlolethan.butteredpd.effects.Flare;
-import com.mrlolethan.butteredpd.ui.Archs;
-import com.mrlolethan.butteredpd.ui.Icons;
-import com.mrlolethan.butteredpd.ui.Window;
 
 public class AboutScene extends PixelScene {
 

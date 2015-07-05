@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.items;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.actors.buffs.Blindness;
@@ -37,6 +36,7 @@ import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
 import com.mrlolethan.butteredpd.windows.WndChooseWay;
+import com.watabou.noosa.audio.Sample;
 
 public class TomeOfMastery extends Item {
 

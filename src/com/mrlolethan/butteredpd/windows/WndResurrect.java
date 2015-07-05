@@ -20,8 +20,6 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Game;
 import com.mrlolethan.butteredpd.Rankings;
 import com.mrlolethan.butteredpd.Statistics;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -31,6 +29,8 @@ import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Game;
 
 public class WndResurrect extends Window {
 	

@@ -24,9 +24,6 @@ import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.particles.EarthParticle;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
-import com.watabou.utils.Bundle;
-
-import java.util.HashSet;
 
 public class EarthImbue extends FlavourBuff {
 

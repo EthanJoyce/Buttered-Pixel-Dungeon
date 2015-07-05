@@ -20,6 +20,10 @@
  */
 package com.mrlolethan.butteredpd.items;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -46,19 +50,13 @@ import com.mrlolethan.butteredpd.items.potions.PotionOfExperience;
 import com.mrlolethan.butteredpd.items.potions.PotionOfHealing;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
 import com.mrlolethan.butteredpd.plants.Plant.Seed;
-import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
-import com.mrlolethan.butteredpd.windows.WndTitledMessage;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
 
 public class Heap implements Bundlable {
 

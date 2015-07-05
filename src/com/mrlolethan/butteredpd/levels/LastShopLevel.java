@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
+import java.util.List;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Bones;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -30,8 +32,6 @@ import com.mrlolethan.butteredpd.levels.Room.Type;
 import com.watabou.noosa.Scene;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
-
-import java.util.List;
 
 public class LastShopLevel extends RegularLevel {
 	

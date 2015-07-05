@@ -20,14 +20,13 @@
  */
 package com.mrlolethan.butteredpd.actors.buffs;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.weapon.missiles.MissileWeapon;
 import com.watabou.utils.Bundle;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
 
 public class PinCushion extends Buff {
 

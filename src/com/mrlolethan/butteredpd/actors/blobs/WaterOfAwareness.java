@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.actors.blobs;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -38,6 +37,7 @@ import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 
 public class WaterOfAwareness extends WellWater {
 

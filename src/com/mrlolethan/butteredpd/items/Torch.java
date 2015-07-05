@@ -22,12 +22,12 @@ package com.mrlolethan.butteredpd.items;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.particles.Emitter;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Light;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.effects.particles.FlameParticle;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
+import com.watabou.noosa.particles.Emitter;
 
 public class Torch extends Item {
 

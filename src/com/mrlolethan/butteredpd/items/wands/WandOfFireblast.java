@@ -20,12 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.wands;
 
-import com.mrlolethan.butteredpd.actors.buffs.Cripple;
-import com.mrlolethan.butteredpd.actors.buffs.Paralysis;
-import com.mrlolethan.butteredpd.effects.MagicMissile;
-import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
-import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
-import com.watabou.noosa.audio.Sample;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -33,13 +29,17 @@ import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.blobs.Fire;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Burning;
+import com.mrlolethan.butteredpd.actors.buffs.Cripple;
+import com.mrlolethan.butteredpd.actors.buffs.Paralysis;
+import com.mrlolethan.butteredpd.effects.MagicMissile;
+import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.mechanics.Ballistica;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
-import java.util.HashSet;
 
 public class WandOfFireblast extends Wand {
 

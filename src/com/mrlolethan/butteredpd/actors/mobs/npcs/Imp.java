@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs.npcs;
 
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Journal;
-import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.mobs.Golem;
@@ -32,7 +31,6 @@ import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.quest.DwarfToken;
 import com.mrlolethan.butteredpd.items.rings.Ring;
 import com.mrlolethan.butteredpd.levels.CityLevel;
-import com.mrlolethan.butteredpd.levels.Room;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ImpSprite;
 import com.mrlolethan.butteredpd.utils.Utils;

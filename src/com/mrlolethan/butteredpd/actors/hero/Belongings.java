@@ -24,9 +24,9 @@ import java.util.Iterator;
 
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.items.KindofMisc;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.KindOfWeapon;
+import com.mrlolethan.butteredpd.items.KindofMisc;
 import com.mrlolethan.butteredpd.items.armor.Armor;
 import com.mrlolethan.butteredpd.items.bags.Bag;
 import com.mrlolethan.butteredpd.items.keys.IronKey;

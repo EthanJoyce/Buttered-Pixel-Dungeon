@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.actors.mobs;
 
 import com.mrlolethan.butteredpd.actors.Char;
-import com.mrlolethan.butteredpd.actors.mobs.npcs.Ghost;
 import com.mrlolethan.butteredpd.sprites.RatSprite;
 import com.watabou.utils.Random;
 

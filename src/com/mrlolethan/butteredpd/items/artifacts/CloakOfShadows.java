@@ -21,6 +21,8 @@
 package com.mrlolethan.butteredpd.items.artifacts;
 
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -33,8 +35,6 @@ import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
-
-import java.util.ArrayList;
 
 public class CloakOfShadows extends Artifact {
 

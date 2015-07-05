@@ -20,8 +20,8 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Dungeon;
+import com.watabou.noosa.Image;
 
 public class BusyIndicator extends Image {
 	

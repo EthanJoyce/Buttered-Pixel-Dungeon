@@ -20,8 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.scrolls;
 
-import com.mrlolethan.butteredpd.items.bags.Bag;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.buffs.Weakness;
@@ -29,7 +27,9 @@ import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.effects.Flare;
 import com.mrlolethan.butteredpd.effects.particles.ShadowParticle;
 import com.mrlolethan.butteredpd.items.Item;
+import com.mrlolethan.butteredpd.items.bags.Bag;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 
 public class ScrollOfRemoveCurse extends Scroll {
 

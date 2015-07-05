@@ -22,17 +22,17 @@ package com.mrlolethan.butteredpd.items;
 
 import java.util.ArrayList;
 
-import com.mrlolethan.butteredpd.items.artifacts.MasterThievesArmband;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Statistics;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.items.artifacts.MasterThievesArmband;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

@@ -22,15 +22,15 @@ package com.mrlolethan.butteredpd.windows;
 
 import java.util.ArrayList;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Chrome;
+import com.mrlolethan.butteredpd.scenes.PixelScene;
+import com.mrlolethan.butteredpd.ui.Window;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.ui.Button;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Chrome;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
-import com.mrlolethan.butteredpd.ui.Window;
 
 public class WndTabbed extends Window {
 

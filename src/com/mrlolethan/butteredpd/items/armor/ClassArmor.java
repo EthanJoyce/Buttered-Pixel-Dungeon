@@ -20,12 +20,12 @@
  */
 package com.mrlolethan.butteredpd.items.armor;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.utils.Bundle;
-
-import java.util.ArrayList;
 
 abstract public class ClassArmor extends Armor {
 	

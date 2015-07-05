@@ -22,13 +22,13 @@ package com.mrlolethan.butteredpd.items.scrolls;
 
 import java.util.ArrayList;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.MirrorImage;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class ScrollOfMirrorImage extends Scroll {

@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import com.mrlolethan.butteredpd.items.Item;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.Collection;
 
 public class QuickSlot {
 

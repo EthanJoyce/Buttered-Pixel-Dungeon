@@ -20,11 +20,8 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
-import com.watabou.noosa.Game;
 import com.watabou.noosa.Gizmo;
-import com.watabou.noosa.audio.Sample;
 
 public class DarkBlock extends Gizmo{
 

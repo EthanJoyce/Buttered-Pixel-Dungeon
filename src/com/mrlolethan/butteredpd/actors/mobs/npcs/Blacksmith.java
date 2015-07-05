@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs.npcs;
 
 import java.util.Collection;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -30,7 +29,6 @@ import com.mrlolethan.butteredpd.Journal;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
-import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.items.EquipableItem;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.quest.DarkGold;
@@ -43,6 +41,7 @@ import com.mrlolethan.butteredpd.sprites.BlacksmithSprite;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.windows.WndBlacksmith;
 import com.mrlolethan.butteredpd.windows.WndQuest;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

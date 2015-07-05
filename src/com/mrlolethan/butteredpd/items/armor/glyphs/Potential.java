@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.armor.glyphs;
 
-import com.watabou.noosa.Camera;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.Lightning;
@@ -30,6 +29,7 @@ import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.traps.LightningTrap;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSprite.Glowing;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Random;
 
 public class Potential extends Glyph {

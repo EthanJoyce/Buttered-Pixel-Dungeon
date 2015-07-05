@@ -24,13 +24,13 @@ import java.util.ArrayList;
 
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.items.KindofMisc;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.ItemStatusHandler;
+import com.mrlolethan.butteredpd.items.KindofMisc;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.utils.Bundle;

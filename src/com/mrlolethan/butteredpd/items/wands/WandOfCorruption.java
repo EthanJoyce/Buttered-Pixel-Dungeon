@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.wands;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -40,9 +43,6 @@ import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
-
-import java.util.Arrays;
-import java.util.HashSet;
 
 //TODO: balancing
 public class WandOfCorruption extends Wand {

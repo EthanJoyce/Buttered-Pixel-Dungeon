@@ -20,10 +20,24 @@
  */
 package com.mrlolethan.butteredpd.actors;
 
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ResultDescriptions;
-import com.mrlolethan.butteredpd.actors.buffs.*;
+import com.mrlolethan.butteredpd.actors.buffs.Bless;
+import com.mrlolethan.butteredpd.actors.buffs.Buff;
+import com.mrlolethan.butteredpd.actors.buffs.Charm;
+import com.mrlolethan.butteredpd.actors.buffs.Chill;
+import com.mrlolethan.butteredpd.actors.buffs.Cripple;
+import com.mrlolethan.butteredpd.actors.buffs.EarthImbue;
+import com.mrlolethan.butteredpd.actors.buffs.FireImbue;
+import com.mrlolethan.butteredpd.actors.buffs.Frost;
+import com.mrlolethan.butteredpd.actors.buffs.MagicalSleep;
+import com.mrlolethan.butteredpd.actors.buffs.Paralysis;
+import com.mrlolethan.butteredpd.actors.buffs.Slow;
+import com.mrlolethan.butteredpd.actors.buffs.Speed;
+import com.mrlolethan.butteredpd.actors.buffs.Vertigo;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.hero.HeroSubClass;
 import com.mrlolethan.butteredpd.actors.mobs.Bestiary;
@@ -34,14 +48,12 @@ import com.mrlolethan.butteredpd.levels.features.Door;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
-
-import java.util.HashSet;
 
 public abstract class Char extends Actor {
 

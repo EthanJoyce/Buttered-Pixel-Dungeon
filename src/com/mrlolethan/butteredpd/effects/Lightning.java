@@ -20,22 +20,22 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
+import java.util.Arrays;
+import java.util.List;
+
 import javax.microedition.khronos.opengles.GL10;
 
 import android.opengl.GLES20;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class Lightning extends Group {
 

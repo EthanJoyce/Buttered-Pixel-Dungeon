@@ -20,9 +20,6 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Scene;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Bones;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -37,6 +34,9 @@ import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.keys.SkeletonKey;
 import com.mrlolethan.butteredpd.levels.painters.Painter;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Scene;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

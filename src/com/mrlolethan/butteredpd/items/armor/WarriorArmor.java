@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.armor;
 
-import com.watabou.noosa.Camera;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -38,6 +37,7 @@ import com.mrlolethan.butteredpd.scenes.CellSelector;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Callback;
 public class WarriorArmor extends ClassArmor {
 	

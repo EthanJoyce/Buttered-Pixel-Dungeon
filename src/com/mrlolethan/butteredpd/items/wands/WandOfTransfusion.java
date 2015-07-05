@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.wands;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
@@ -29,7 +32,15 @@ import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Charm;
 import com.mrlolethan.butteredpd.actors.buffs.Corruption;
-import com.mrlolethan.butteredpd.actors.mobs.*;
+import com.mrlolethan.butteredpd.actors.mobs.King;
+import com.mrlolethan.butteredpd.actors.mobs.Mob;
+import com.mrlolethan.butteredpd.actors.mobs.Monk;
+import com.mrlolethan.butteredpd.actors.mobs.Senior;
+import com.mrlolethan.butteredpd.actors.mobs.Skeleton;
+import com.mrlolethan.butteredpd.actors.mobs.Succubus;
+import com.mrlolethan.butteredpd.actors.mobs.Warlock;
+import com.mrlolethan.butteredpd.actors.mobs.Wraith;
+import com.mrlolethan.butteredpd.actors.mobs.Yog;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Ghost;
 import com.mrlolethan.butteredpd.effects.Beam;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
@@ -55,9 +66,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class WandOfTransfusion extends Wand {
 

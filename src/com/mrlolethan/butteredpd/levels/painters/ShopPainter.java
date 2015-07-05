@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.levels.painters;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Belongings;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
@@ -72,9 +75,6 @@ import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.plants.Plant;
 import com.watabou.utils.Point;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class ShopPainter extends Painter {
 

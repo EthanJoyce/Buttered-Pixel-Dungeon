@@ -20,9 +20,9 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.watabou.noosa.TextureFilm;
 
 public class DM300Sprite extends MobSprite {
 	

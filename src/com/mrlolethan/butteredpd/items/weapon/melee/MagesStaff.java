@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.items.weapon.melee;
 
+import java.util.ArrayList;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Char;
@@ -29,7 +31,18 @@ import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.bags.Bag;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfRecharging;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
-import com.mrlolethan.butteredpd.items.wands.*;
+import com.mrlolethan.butteredpd.items.wands.Wand;
+import com.mrlolethan.butteredpd.items.wands.WandOfBlastWave;
+import com.mrlolethan.butteredpd.items.wands.WandOfCorruption;
+import com.mrlolethan.butteredpd.items.wands.WandOfDisintegration;
+import com.mrlolethan.butteredpd.items.wands.WandOfFireblast;
+import com.mrlolethan.butteredpd.items.wands.WandOfFrost;
+import com.mrlolethan.butteredpd.items.wands.WandOfLightning;
+import com.mrlolethan.butteredpd.items.wands.WandOfMagicMissile;
+import com.mrlolethan.butteredpd.items.wands.WandOfPrismaticLight;
+import com.mrlolethan.butteredpd.items.wands.WandOfRegrowth;
+import com.mrlolethan.butteredpd.items.wands.WandOfTransfusion;
+import com.mrlolethan.butteredpd.items.wands.WandOfVenom;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
@@ -39,11 +52,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.ColorMath;
-import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
 
 public class MagesStaff extends MeleeWeapon {
 

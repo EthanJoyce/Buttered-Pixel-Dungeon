@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.sprites;
 
-import com.watabou.noosa.TextureFilm;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.effects.Beam;
+import com.watabou.noosa.TextureFilm;
 
 public class EyeSprite extends MobSprite {
 	

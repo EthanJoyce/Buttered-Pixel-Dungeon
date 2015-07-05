@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.levels.features;
 
+import java.util.Iterator;
+
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.items.Heap;
@@ -28,8 +30,6 @@ import com.mrlolethan.butteredpd.items.food.Blandfruit;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.windows.WndBag;
 import com.mrlolethan.butteredpd.windows.WndOptions;
-
-import java.util.Iterator;
 
 public class AlchemyPot {
 

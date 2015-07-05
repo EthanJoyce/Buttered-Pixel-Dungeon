@@ -25,7 +25,6 @@ import com.mrlolethan.butteredpd.ResultDescriptions;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.utils.GLog;
-import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Ooze extends Buff {

@@ -20,8 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.armor;
 
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfTeleportation;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -32,11 +30,13 @@ import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfTeleportation;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.CellSelector;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 
 public class RogueArmor extends ClassArmor {
 	

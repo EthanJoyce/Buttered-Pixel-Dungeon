@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.effects.particles;
 
+import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.noosa.particles.Emitter.Factory;
-import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.DungeonTilemap;
+import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 

@@ -22,10 +22,10 @@ package com.mrlolethan.butteredpd.levels;
 
 import java.util.Arrays;
 
-import com.watabou.noosa.Scene;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.items.Amulet;
 import com.mrlolethan.butteredpd.levels.painters.Painter;
+import com.watabou.noosa.Scene;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

@@ -22,8 +22,8 @@ package com.mrlolethan.butteredpd.levels.painters;
 
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.items.Generator;
-import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.Heap.Type;
+import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.keys.GoldenKey;
 import com.mrlolethan.butteredpd.items.keys.IronKey;
 import com.mrlolethan.butteredpd.levels.Level;

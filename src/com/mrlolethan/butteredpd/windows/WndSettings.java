@@ -20,15 +20,15 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-import com.mrlolethan.butteredpd.ui.Toolbar;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.CheckBox;
 import com.mrlolethan.butteredpd.ui.RedButton;
+import com.mrlolethan.butteredpd.ui.Toolbar;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.audio.Sample;
 
 public class WndSettings extends Window {
 	

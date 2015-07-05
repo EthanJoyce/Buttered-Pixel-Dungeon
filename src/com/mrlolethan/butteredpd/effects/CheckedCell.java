@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
+import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
-import com.mrlolethan.butteredpd.DungeonTilemap;
 
 public class CheckedCell extends Image {
 	

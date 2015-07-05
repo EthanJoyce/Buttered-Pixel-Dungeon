@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.items.scrolls;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.windows.WndBag;
 import com.mrlolethan.butteredpd.windows.WndOptions;
+import com.watabou.noosa.audio.Sample;
 
 public abstract class InventoryScroll extends Scroll {
 

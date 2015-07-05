@@ -20,9 +20,8 @@
  */
 package com.mrlolethan.butteredpd.plants;
 
-import com.mrlolethan.butteredpd.actors.Actor;
-import com.watabou.noosa.Camera;
 import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
@@ -31,6 +30,7 @@ import com.mrlolethan.butteredpd.items.potions.PotionOfParalyticGas;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Bundle;
 
 public class Earthroot extends Plant {

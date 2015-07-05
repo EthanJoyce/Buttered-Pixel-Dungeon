@@ -22,8 +22,6 @@ package com.mrlolethan.butteredpd.items.weapon.enchantments;
 
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.items.weapon.Weapon;
-import com.mrlolethan.butteredpd.items.weapon.Weapon.Enchantment;
-import com.mrlolethan.butteredpd.items.weapon.missiles.Boomerang;
 
 public class Instability extends Weapon.Enchantment {
 

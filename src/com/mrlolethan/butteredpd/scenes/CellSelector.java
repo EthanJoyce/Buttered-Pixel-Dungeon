@@ -21,9 +21,9 @@
 package com.mrlolethan.butteredpd.scenes;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.TouchArea;
-import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PointF;
 

@@ -30,7 +30,6 @@ import com.mrlolethan.butteredpd.effects.particles.ShaftParticle;
 import com.mrlolethan.butteredpd.items.potions.PotionOfHealing;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.ui.BuffIndicator;
-import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public class Sungrass extends Plant {

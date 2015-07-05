@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.watabou.noosa.BitmapTextMultiline;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapTextMultiline;
 
 public class WndOptions extends Window {
 

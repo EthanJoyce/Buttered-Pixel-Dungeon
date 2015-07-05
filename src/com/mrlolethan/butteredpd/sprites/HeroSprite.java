@@ -22,15 +22,15 @@ package com.mrlolethan.butteredpd.sprites;
 
 import android.graphics.RectF;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.TextureFilm;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.hero.Hero;
-import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.watabou.utils.Callback;
 
 public class HeroSprite extends CharSprite {

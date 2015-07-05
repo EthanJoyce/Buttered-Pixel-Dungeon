@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.levels.painters;
 
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.actors.buffs.Poison;
 import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Item;

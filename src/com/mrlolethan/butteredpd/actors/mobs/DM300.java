@@ -22,13 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 
 import java.util.HashSet;
 
-import com.mrlolethan.butteredpd.actors.buffs.Terror;
-import com.mrlolethan.butteredpd.gamemodes.GameMode;
-import com.mrlolethan.butteredpd.items.ArenaShopKey;
-import com.mrlolethan.butteredpd.items.artifacts.CapeOfThorns;
-import com.mrlolethan.butteredpd.items.artifacts.LloydsBeacon;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -38,9 +31,14 @@ import com.mrlolethan.butteredpd.actors.blobs.Blob;
 import com.mrlolethan.butteredpd.actors.blobs.ToxicGas;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Paralysis;
+import com.mrlolethan.butteredpd.actors.buffs.Terror;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.effects.particles.ElmoParticle;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.mrlolethan.butteredpd.items.ArenaShopKey;
+import com.mrlolethan.butteredpd.items.artifacts.CapeOfThorns;
+import com.mrlolethan.butteredpd.items.artifacts.LloydsBeacon;
 import com.mrlolethan.butteredpd.items.keys.SkeletonKey;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfPsionicBlast;
 import com.mrlolethan.butteredpd.items.weapon.enchantments.Death;
@@ -49,6 +47,8 @@ import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.DM300Sprite;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class DM300 extends Mob {

@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.wands;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
@@ -29,7 +32,21 @@ import com.mrlolethan.butteredpd.actors.buffs.Blindness;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Cripple;
 import com.mrlolethan.butteredpd.actors.buffs.Light;
-import com.mrlolethan.butteredpd.actors.mobs.*;
+import com.mrlolethan.butteredpd.actors.mobs.Acidic;
+import com.mrlolethan.butteredpd.actors.mobs.Bandit;
+import com.mrlolethan.butteredpd.actors.mobs.Eye;
+import com.mrlolethan.butteredpd.actors.mobs.Goo;
+import com.mrlolethan.butteredpd.actors.mobs.King;
+import com.mrlolethan.butteredpd.actors.mobs.Mimic;
+import com.mrlolethan.butteredpd.actors.mobs.Monk;
+import com.mrlolethan.butteredpd.actors.mobs.Scorpio;
+import com.mrlolethan.butteredpd.actors.mobs.Senior;
+import com.mrlolethan.butteredpd.actors.mobs.Skeleton;
+import com.mrlolethan.butteredpd.actors.mobs.Succubus;
+import com.mrlolethan.butteredpd.actors.mobs.Thief;
+import com.mrlolethan.butteredpd.actors.mobs.Warlock;
+import com.mrlolethan.butteredpd.actors.mobs.Wraith;
+import com.mrlolethan.butteredpd.actors.mobs.Yog;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Ghost;
 import com.mrlolethan.butteredpd.effects.Beam;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
@@ -37,7 +54,6 @@ import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.effects.particles.RainbowParticle;
 import com.mrlolethan.butteredpd.effects.particles.ShadowParticle;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicMapping;
-import com.mrlolethan.butteredpd.items.weapon.enchantments.Paralysis;
 import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
@@ -48,9 +64,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
-
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class WandOfPrismaticLight extends Wand {
 

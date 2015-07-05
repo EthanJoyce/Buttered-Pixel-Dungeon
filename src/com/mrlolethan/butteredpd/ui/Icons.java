@@ -20,9 +20,9 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
+import com.watabou.noosa.Image;
 
 public enum Icons {
 

@@ -20,18 +20,18 @@
  */
 package com.mrlolethan.butteredpd.windows;
 
-import com.mrlolethan.butteredpd.items.artifacts.Artifact;
-import com.mrlolethan.butteredpd.items.rings.Ring;
-import com.mrlolethan.butteredpd.items.wands.Wand;
-import com.watabou.noosa.BitmapTextMultiline;
 import com.mrlolethan.butteredpd.items.Heap;
 import com.mrlolethan.butteredpd.items.Heap.Type;
 import com.mrlolethan.butteredpd.items.Item;
+import com.mrlolethan.butteredpd.items.artifacts.Artifact;
+import com.mrlolethan.butteredpd.items.rings.Ring;
+import com.mrlolethan.butteredpd.items.wands.Wand;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.ui.ItemSlot;
 import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapTextMultiline;
 
 public class WndInfoItem extends Window {
 	

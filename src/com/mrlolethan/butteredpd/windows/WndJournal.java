@@ -23,15 +23,15 @@ package com.mrlolethan.butteredpd.windows;
 import java.util.Collections;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Journal;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.ui.Icons;
 import com.mrlolethan.butteredpd.ui.ScrollPane;
 import com.mrlolethan.butteredpd.ui.Window;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.ui.Component;
 
 public class WndJournal extends Window {
 

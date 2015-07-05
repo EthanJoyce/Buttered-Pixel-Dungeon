@@ -20,9 +20,9 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.particles.Emitter;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.PointF;
 
 public class CellEmitter {

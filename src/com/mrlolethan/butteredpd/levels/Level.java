@@ -20,6 +20,12 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -60,13 +66,13 @@ import com.mrlolethan.butteredpd.items.potions.PotionOfMight;
 import com.mrlolethan.butteredpd.items.potions.PotionOfStrength;
 import com.mrlolethan.butteredpd.items.rings.RingOfWealth;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicalInfusion;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.levels.features.Chasm;
 import com.mrlolethan.butteredpd.levels.features.Door;
 import com.mrlolethan.butteredpd.levels.features.HighGrass;
 import com.mrlolethan.butteredpd.levels.painters.Painter;
-import com.mrlolethan.butteredpd.levels.traps.*;
+import com.mrlolethan.butteredpd.levels.traps.Trap;
 import com.mrlolethan.butteredpd.mechanics.ShadowCaster;
 import com.mrlolethan.butteredpd.plants.BlandfruitBush;
 import com.mrlolethan.butteredpd.plants.Plant;
@@ -80,12 +86,6 @@ import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
 
 public abstract class Level implements Bundlable {
 	

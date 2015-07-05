@@ -20,11 +20,11 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
 import com.mrlolethan.butteredpd.ui.Icons;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.utils.Random;
 
 public class EmoIcon extends Image {

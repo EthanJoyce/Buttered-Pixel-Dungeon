@@ -20,10 +20,10 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.Chrome;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.ui.Button;
-import com.mrlolethan.butteredpd.Chrome;
 
 public class Tag extends Button {
 

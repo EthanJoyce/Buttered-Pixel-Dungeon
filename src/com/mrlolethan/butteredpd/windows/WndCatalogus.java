@@ -23,8 +23,6 @@ package com.mrlolethan.butteredpd.windows;
 import java.util.ArrayList;
 
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.ui.Component;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.potions.Potion;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
@@ -34,6 +32,8 @@ import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.ui.ScrollPane;
 import com.mrlolethan.butteredpd.ui.Window;
 import com.mrlolethan.butteredpd.utils.Utils;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.ui.Component;
 
 public class WndCatalogus extends WndTabbed {
 

@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.items.artifacts;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -33,9 +36,6 @@ import com.mrlolethan.butteredpd.windows.WndBag;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class AlchemistsToolkit extends Artifact {
 

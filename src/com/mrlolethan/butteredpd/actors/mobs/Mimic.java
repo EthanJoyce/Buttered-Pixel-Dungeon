@@ -25,8 +25,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
-import com.mrlolethan.butteredpd.items.Generator;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
@@ -34,12 +32,14 @@ import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Pushing;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Gold;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfPsionicBlast;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.MimicSprite;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 

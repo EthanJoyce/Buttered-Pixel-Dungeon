@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Group;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.DungeonTilemap;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.levels.Level;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Group;
+import com.watabou.noosa.Image;
 
 public class Wound extends Image {
 

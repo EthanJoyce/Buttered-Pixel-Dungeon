@@ -20,15 +20,14 @@
  */
 package com.mrlolethan.butteredpd.items.potions;
 
-import com.mrlolethan.butteredpd.actors.blobs.ConfusionGas;
-import com.mrlolethan.butteredpd.actors.blobs.StenchGas;
-import com.mrlolethan.butteredpd.actors.blobs.VenomGas;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.blobs.Blob;
+import com.mrlolethan.butteredpd.actors.blobs.ConfusionGas;
 import com.mrlolethan.butteredpd.actors.blobs.ParalyticGas;
+import com.mrlolethan.butteredpd.actors.blobs.StenchGas;
 import com.mrlolethan.butteredpd.actors.blobs.ToxicGas;
+import com.mrlolethan.butteredpd.actors.blobs.VenomGas;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.GasesImmunity;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
@@ -37,6 +36,7 @@ import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.utils.BArray;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PathFinder;
 
 public class PotionOfPurity extends Potion {

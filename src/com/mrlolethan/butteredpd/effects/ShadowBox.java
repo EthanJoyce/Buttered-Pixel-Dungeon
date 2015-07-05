@@ -20,9 +20,9 @@
  */
 package com.mrlolethan.butteredpd.effects;
 
+import com.mrlolethan.butteredpd.Assets;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.noosa.NinePatch;
-import com.mrlolethan.butteredpd.Assets;
 
 public class ShadowBox extends NinePatch {
 

@@ -22,7 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs.npcs;
 
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.buffs.Buff;
-import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.particles.ElmoParticle;
 import com.mrlolethan.butteredpd.items.Heap;

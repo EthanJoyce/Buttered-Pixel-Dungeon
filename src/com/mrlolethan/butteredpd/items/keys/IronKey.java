@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.items.keys;
 
 import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.bags.Bag;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.utils.Utils;

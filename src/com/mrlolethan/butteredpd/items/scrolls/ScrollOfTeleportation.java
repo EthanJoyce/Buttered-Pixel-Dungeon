@@ -20,14 +20,14 @@
  */
 package com.mrlolethan.butteredpd.items.scrolls;
 
-import com.mrlolethan.butteredpd.actors.Char;
-import com.mrlolethan.butteredpd.effects.Speck;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Invisibility;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.tweeners.AlphaTweener;
 
 public class ScrollOfTeleportation extends Scroll {

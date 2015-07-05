@@ -21,9 +21,9 @@
 package com.mrlolethan.butteredpd.scenes;
 
 import com.mrlolethan.butteredpd.Badges;
+import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Chrome;
 import com.mrlolethan.butteredpd.Rankings;
-import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.ui.Archs;
 import com.mrlolethan.butteredpd.ui.RedButton;
 import com.mrlolethan.butteredpd.ui.ScrollPane;

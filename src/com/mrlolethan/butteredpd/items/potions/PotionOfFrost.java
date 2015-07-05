@@ -20,13 +20,13 @@
  */
 package com.mrlolethan.butteredpd.items.potions;
 
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.blobs.Fire;
 import com.mrlolethan.butteredpd.actors.blobs.Freezing;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.utils.BArray;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PathFinder;
 
 public class PotionOfFrost extends Potion {

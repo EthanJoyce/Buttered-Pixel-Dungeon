@@ -20,7 +20,6 @@
  */
 package com.mrlolethan.butteredpd.items.bags;
 
-import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.wands.Wand;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;

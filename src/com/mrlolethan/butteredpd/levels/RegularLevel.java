@@ -20,6 +20,12 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+
 import com.mrlolethan.butteredpd.Bones;
 import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -46,12 +52,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Graph;
 import com.watabou.utils.Random;
 import com.watabou.utils.Rect;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
 
 public abstract class RegularLevel extends Level {
 
