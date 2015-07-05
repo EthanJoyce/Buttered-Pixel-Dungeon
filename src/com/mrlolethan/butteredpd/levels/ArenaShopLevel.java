@@ -49,7 +49,7 @@ public class ArenaShopLevel extends RegularLevel {
 	@Override
 	protected boolean build() {
 
-		viewDistance = 4;
+		viewDistance = 8;
 		
 		initRooms();
 		
