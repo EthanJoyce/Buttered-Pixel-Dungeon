@@ -27,7 +27,9 @@ import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Statistics;
 import com.mrlolethan.butteredpd.actors.Actor;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.Generator;
+import com.mrlolethan.butteredpd.levels.ArenaShopLevel;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.windows.WndError;
 import com.mrlolethan.butteredpd.windows.WndStory;
@@ -250,6 +252,11 @@ public class InterlevelScene extends PixelScene {
 	
 	private void ascend() throws IOException {
 		Actor.fixTime();
+		
+		// Don't allow ArenaShopLevels to persist
+		if (Dungeon.gamemode == GameMode.ARENA && Dungeon.level instanceof ArenaShopLevel) {
+			Statistics.deepestFloor = 1;
+		}
 		
 		Dungeon.saveLevel();
 		Dungeon.depth--;
