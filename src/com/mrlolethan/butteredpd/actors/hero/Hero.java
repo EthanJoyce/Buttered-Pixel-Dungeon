@@ -20,6 +20,10 @@
  */
 package com.mrlolethan.butteredpd.actors.hero;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Bones;
@@ -56,6 +60,7 @@ import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.CheckedCell;
 import com.mrlolethan.butteredpd.effects.Flare;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.Amulet;
 import com.mrlolethan.butteredpd.items.Ankh;
 import com.mrlolethan.butteredpd.items.Dewdrop;
@@ -85,10 +90,11 @@ import com.mrlolethan.butteredpd.items.rings.RingOfMight;
 import com.mrlolethan.butteredpd.items.rings.RingOfTenacity;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicMapping;
-import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicalInfusion;
+import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.weapon.melee.MeleeWeapon;
 import com.mrlolethan.butteredpd.items.weapon.missiles.MissileWeapon;
+import com.mrlolethan.butteredpd.levels.ArenaLevel;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.levels.features.AlchemyPot;
@@ -112,10 +118,6 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 
 public class Hero extends Char {
 
@@ -758,18 +760,38 @@ public class Hero extends Char {
 		int stairs = action.dst;
 		if (pos == stairs && pos == Dungeon.level.exit) {
 			
-			curAction = null;
+			if (Dungeon.gamemode == GameMode.ARENA) {
+				if (Dungeon.depth == 2) {
+					GameScene.show(new WndMessage("You have a weird feeling that this isn't where you're supposed to be going..."));
+					ready();
+				} else {
+					curAction = null;
 
-			Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
-			if (buff != null) buff.detach();
+					Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
+					if (buff != null) buff.detach();
 
-			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] ))
-				if (mob instanceof DriedRose.GhostHero) mob.destroy();
-			
-			InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-			Game.switchScene( InterlevelScene.class );
+					for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] ))
+						if (mob instanceof DriedRose.GhostHero) mob.destroy();
+					
+					Dungeon.depth = 25;
+					InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
+					Game.switchScene(InterlevelScene.class);
+				}
+				return false;
+			} else {
+				curAction = null;
 
-			return false;
+				Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
+				if (buff != null) buff.detach();
+
+				for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] ))
+					if (mob instanceof DriedRose.GhostHero) mob.destroy();
+				
+				InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
+				Game.switchScene( InterlevelScene.class );
+
+				return false;
+			}
 
 		} else if (getCloser( stairs )) {
 
@@ -792,7 +814,7 @@ public class Hero extends Char {
 					ready();
 				} else {
 					Dungeon.win( ResultDescriptions.WIN );
-					Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+					Dungeon.deleteGame( Dungeon.gamemode, Dungeon.hero.heroClass, true );
 					Game.switchScene( SurfaceScene.class );
 				}
 				
@@ -811,6 +833,9 @@ public class Hero extends Char {
 				for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] ))
 					if (mob instanceof DriedRose.GhostHero) mob.destroy();
 
+				if (Dungeon.gamemode == GameMode.ARENA && Dungeon.depth == 26) {
+					Dungeon.depth = 2; // Hacky way of allowing the hero to return to the arena
+				}
 				InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
 				Game.switchScene( InterlevelScene.class );
 			}
@@ -1108,7 +1133,14 @@ public class Hero extends Char {
 				levelUp = true;
 
 				HT += 5;
-				HP += 5;
+				if (Dungeon.gamemode == GameMode.ARENA) {
+					HP = HT;
+					ArenaLevel level = (ArenaLevel)Dungeon.level;
+					
+					level.nextWave();
+				} else {
+					HP += 5;
+				}
 				attackSkill++;
 				defenseSkill++;
 
@@ -1265,7 +1297,7 @@ public class Hero extends Char {
 			
 		} else {
 			
-			Dungeon.deleteGame( Dungeon.hero.heroClass, false );
+			Dungeon.deleteGame( Dungeon.gamemode, Dungeon.hero.heroClass, false );
 			GameScene.show( new WndResurrect( ankh, cause ) );
 			
 		}
@@ -1291,7 +1323,9 @@ public class Hero extends Char {
 			}
 		}
 		
-		Bones.leave();
+		if (Dungeon.gamemode == GameMode.REGULAR) {
+			Bones.leave();
+		}
 		
 		Dungeon.observe();
 				
@@ -1325,7 +1359,7 @@ public class Hero extends Char {
 			((Hero.Doom)cause).onDeath();
 		}
 		
-		Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+		Dungeon.deleteGame( Dungeon.gamemode, Dungeon.hero.heroClass, true );
 	}
 	
 	@Override

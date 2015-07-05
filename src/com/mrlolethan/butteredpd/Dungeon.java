@@ -20,6 +20,13 @@
  */
 package com.mrlolethan.butteredpd;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.Char;
 import com.mrlolethan.butteredpd.actors.buffs.Amok;
@@ -30,6 +37,7 @@ import com.mrlolethan.butteredpd.actors.mobs.npcs.Blacksmith;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Ghost;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Imp;
 import com.mrlolethan.butteredpd.actors.mobs.npcs.Wandmaker;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.Ankh;
 import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Item;
@@ -37,6 +45,8 @@ import com.mrlolethan.butteredpd.items.potions.Potion;
 import com.mrlolethan.butteredpd.items.rings.Ring;
 import com.mrlolethan.butteredpd.items.scrolls.Scroll;
 import com.mrlolethan.butteredpd.items.weapon.melee.MagesStaff;
+import com.mrlolethan.butteredpd.levels.ArenaLevel;
+import com.mrlolethan.butteredpd.levels.ArenaShopLevel;
 import com.mrlolethan.butteredpd.levels.CavesBossLevel;
 import com.mrlolethan.butteredpd.levels.CavesLevel;
 import com.mrlolethan.butteredpd.levels.CityBossLevel;
@@ -64,13 +74,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 import com.watabou.utils.SparseArray;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class Dungeon {
 
@@ -114,6 +117,8 @@ public class Dungeon {
 		}
 	}
 
+	public static GameMode gamemode;
+
 	public static int challenges;
 
 	public static Hero hero;
@@ -134,6 +139,7 @@ public class Dungeon {
 	public static SparseArray<ArrayList<Item>> droppedItems;
 
 	public static int version;
+	
 	
 	public static void init() {
 
@@ -207,60 +213,70 @@ public class Dungeon {
 		Arrays.fill( visible, false );
 		
 		Level level;
-		switch (depth) {
-		case 1:
-		case 2:
-		case 3:
-		case 4:
-			level = new SewerLevel();
-			break;
-		case 5:
-			level = new SewerBossLevel();
-			break;
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-			level = new PrisonLevel();
-			break;
-		case 10:
-			level = new PrisonBossLevel();
-			break;
-		case 11:
-		case 12:
-		case 13:
-		case 14:
-			level = new CavesLevel();
-			break;
-		case 15:
-			level = new CavesBossLevel();
-			break;
-		case 16:
-		case 17:
-		case 18:
-		case 19:
-			level = new CityLevel();
-			break;
-		case 20:
-			level = new CityBossLevel();
-			break;
-		case 21:
-			level = new LastShopLevel();
-			break;
-		case 22:
-		case 23:
-		case 24:
-			level = new HallsLevel();
-			break;
-		case 25:
-			level = new HallsBossLevel();
-			break;
-		case 26:
-			level = new LastLevel();
-			break;
-		default:
-			level = new DeadEndLevel();
-			Statistics.deepestFloor--;
+		if (gamemode == GameMode.ARENA) {
+			if (depth == 2) {
+				level = new ArenaShopLevel();
+			} else if (depth == 26) {
+				level = new LastLevel();
+			} else {
+				level = new ArenaLevel();
+			}
+		} else {
+			switch (depth) {
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				level = new SewerLevel();
+				break;
+			case 5:
+				level = new SewerBossLevel();
+				break;
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+				level = new PrisonLevel();
+				break;
+			case 10:
+				level = new PrisonBossLevel();
+				break;
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+				level = new CavesLevel();
+				break;
+			case 15:
+				level = new CavesBossLevel();
+				break;
+			case 16:
+			case 17:
+			case 18:
+			case 19:
+				level = new CityLevel();
+				break;
+			case 20:
+				level = new CityBossLevel();
+				break;
+			case 21:
+				level = new LastShopLevel();
+				break;
+			case 22:
+			case 23:
+			case 24:
+				level = new HallsLevel();
+				break;
+			case 25:
+				level = new HallsBossLevel();
+				break;
+			case 26:
+				level = new LastLevel();
+				break;
+			default:
+				level = new DeadEndLevel();
+				Statistics.deepestFloor--;
+			}
 		}
 		
 		level.create();
@@ -292,7 +308,6 @@ public class Dungeon {
 		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 25;
 	}
 	
-	@SuppressWarnings("deprecation")
 	public static void switchLevel( final Level level, int pos ) {
 		
 		Dungeon.level = level;
@@ -393,29 +408,29 @@ public class Dungeon {
 	private static final String SOU			= "scrollsOfEnhancement";
 	private static final String AS			= "arcaneStyli";
 	
-	public static String gameFile( HeroClass cl ) {
+	public static String gameFile( GameMode mode, HeroClass cl ) {
 		switch (cl) {
 		case WARRIOR:
-			return WR_GAME_FILE;
+			return mode.getSavesPrefix() + "--" + WR_GAME_FILE;
 		case MAGE:
-			return MG_GAME_FILE;
+			return mode.getSavesPrefix() + "--" + MG_GAME_FILE;
 		case HUNTRESS:
-			return RN_GAME_FILE;
+			return mode.getSavesPrefix() + "--" + RN_GAME_FILE;
 		default:
-			return RG_GAME_FILE;
+			return mode.getSavesPrefix() + "--" + RG_GAME_FILE;
 		}
 	}
 	
-	private static String depthFile( HeroClass cl ) {
+	private static String depthFile( GameMode mode, HeroClass cl ) {
 		switch (cl) {
 		case WARRIOR:
-			return WR_DEPTH_FILE;
+			return mode.getSavesPrefix() + "--" + WR_DEPTH_FILE;
 		case MAGE:
-			return MG_DEPTH_FILE;
+			return mode.getSavesPrefix() + "--" + MG_DEPTH_FILE;
 		case HUNTRESS:
-			return RN_DEPTH_FILE;
+			return mode.getSavesPrefix() + "--" + RN_DEPTH_FILE;
 		default:
-			return RG_DEPTH_FILE;
+			return mode.getSavesPrefix() + "--" + RG_DEPTH_FILE;
 		}
 	}
 	
@@ -479,7 +494,7 @@ public class Dungeon {
 			
 		} catch (IOException e) {
 
-			GamesInProgress.setUnknown( hero.heroClass );
+			GamesInProgress.setUnknown( gamemode, hero.heroClass );
 		}
 	}
 	
@@ -488,7 +503,7 @@ public class Dungeon {
 		bundle.put( LEVEL, level );
 		
 		OutputStream output = Game.instance.openFileOutput(
-			Utils.format( depthFile( hero.heroClass ), depth ), Game.MODE_PRIVATE );
+			Utils.format( depthFile( gamemode, hero.heroClass ), depth ), Game.MODE_PRIVATE );
 		Bundle.write( bundle, output );
 		output.close();
 	}
@@ -497,10 +512,10 @@ public class Dungeon {
 		if (hero.isAlive()) {
 			
 			Actor.fixTime();
-			saveGame( gameFile( hero.heroClass ) );
+			saveGame( gameFile( gamemode, hero.heroClass ) );
 			saveLevel();
 
-			GamesInProgress.set( hero.heroClass, depth, hero.lvl, challenges != 0 );
+			GamesInProgress.set( gamemode, hero.heroClass, depth, hero.lvl, challenges != 0 );
 
 		} else if (WndResurrect.instance != null) {
 			
@@ -510,8 +525,8 @@ public class Dungeon {
 		}
 	}
 	
-	public static void loadGame( HeroClass cl ) throws IOException {
-		loadGame( gameFile( cl ), true );
+	public static void loadGame( GameMode mode, HeroClass cl ) throws IOException {
+		loadGame( gameFile( mode, cl ), true );
 	}
 
 	public static void loadGame( String fileName ) throws IOException {
@@ -631,25 +646,25 @@ public class Dungeon {
 		Dungeon.level = null;
 		Actor.clear();
 		
-		InputStream input = Game.instance.openFileInput( Utils.format( depthFile( cl ), depth ) ) ;
+		InputStream input = Game.instance.openFileInput( Utils.format( depthFile( gamemode, cl ), depth ) ) ;
 		Bundle bundle = Bundle.read( input );
 		input.close();
 		
 		return (Level)bundle.get( "level" );
 	}
 	
-	public static void deleteGame( HeroClass cl, boolean deleteLevels ) {
+	public static void deleteGame( GameMode mode, HeroClass cl, boolean deleteLevels ) {
 		
-		Game.instance.deleteFile( gameFile( cl ) );
+		Game.instance.deleteFile( gameFile( mode, cl ) );
 		
 		if (deleteLevels) {
 			int depth = 1;
-			while (Game.instance.deleteFile( Utils.format( depthFile( cl ), depth ) )) {
+			while (Game.instance.deleteFile( Utils.format( depthFile( gamemode, cl ), depth ) )) {
 				depth++;
 			}
 		}
 		
-		GamesInProgress.delete( cl );
+		GamesInProgress.delete( gamemode, cl );
 	}
 	
 	public static Bundle gameBundle( String fileName ) throws IOException {

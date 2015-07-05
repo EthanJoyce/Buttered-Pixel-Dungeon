@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.actors.mobs;
 
+import java.util.HashSet;
+
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -35,11 +37,13 @@ import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.actors.hero.HeroSubClass;
 import com.mrlolethan.butteredpd.effects.Surprise;
 import com.mrlolethan.butteredpd.effects.Wound;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.Generator;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.artifacts.TimekeepersHourglass;
 import com.mrlolethan.butteredpd.items.rings.RingOfAccuracy;
 import com.mrlolethan.butteredpd.items.rings.RingOfWealth;
+import com.mrlolethan.butteredpd.levels.ArenaLevel;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Level.Feeling;
 import com.mrlolethan.butteredpd.sprites.CharSprite;
@@ -47,8 +51,6 @@ import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
-
-import java.util.HashSet;
 
 public abstract class Mob extends Char {
 
@@ -416,9 +418,24 @@ public abstract class Mob extends Char {
 				Badges.validateNightHunter();
 			}
 			
-			if (Dungeon.hero.lvl <= maxLvl && EXP > 0) {
+			if (Dungeon.gamemode == GameMode.ARENA) {
+				ArenaLevel level = (ArenaLevel) Dungeon.level;
+				
+				final int oldWave = level.getWave();
+				
 				Dungeon.hero.sprite.showStatus( CharSprite.POSITIVE, TXT_EXP, EXP );
 				Dungeon.hero.earnExp( EXP );
+				
+				// If the player hasn't gone to the next wave
+				if (oldWave == level.getWave() && level.mobs.size() == 0) {
+					// then reset the floor (just respawns mobs)
+					level.reset();
+				}
+			} else {
+				if (Dungeon.hero.lvl <= maxLvl && EXP > 0) {
+					Dungeon.hero.sprite.showStatus( CharSprite.POSITIVE, TXT_EXP, EXP );
+					Dungeon.hero.earnExp( EXP );
+				}
 			}
 		}
 	}

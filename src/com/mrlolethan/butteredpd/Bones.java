@@ -20,22 +20,22 @@
  */
 package com.mrlolethan.butteredpd;
 
-import com.mrlolethan.butteredpd.actors.hero.Hero;
-import com.mrlolethan.butteredpd.items.Generator;
-import com.mrlolethan.butteredpd.items.Gold;
-import com.mrlolethan.butteredpd.items.Item;
-import com.mrlolethan.butteredpd.items.artifacts.Artifact;
-import com.mrlolethan.butteredpd.items.weapon.missiles.MissileWeapon;
-import com.mrlolethan.butteredpd.ui.QuickSlotButton;
-import com.watabou.noosa.Game;
-import com.watabou.utils.Bundle;
-import com.watabou.utils.Random;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.mrlolethan.butteredpd.items.Generator;
+import com.mrlolethan.butteredpd.items.Gold;
+import com.mrlolethan.butteredpd.items.Item;
+import com.mrlolethan.butteredpd.items.artifacts.Artifact;
+import com.mrlolethan.butteredpd.items.weapon.missiles.MissileWeapon;
+import com.watabou.noosa.Game;
+import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 public class Bones {
 
@@ -145,7 +145,7 @@ public class Bones {
 
 		} else {
 			//heroes who are challenged cannot find bones
-			if (depth == Dungeon.depth && Dungeon.challenges == 0) {
+			if (Dungeon.gamemode == GameMode.REGULAR && depth == Dungeon.depth && Dungeon.challenges == 0) {
 				Game.instance.deleteFile( BONES_FILE );
 				depth = 0;
 

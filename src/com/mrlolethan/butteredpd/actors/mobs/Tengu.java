@@ -22,10 +22,6 @@ package com.mrlolethan.butteredpd.actors.mobs;
 
 import java.util.HashSet;
 
-import com.mrlolethan.butteredpd.items.artifacts.LloydsBeacon;
-import com.mrlolethan.butteredpd.levels.traps.PoisonTrap;
-import com.mrlolethan.butteredpd.utils.GLog;
-import com.watabou.noosa.audio.Sample;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Badges.Badge;
@@ -36,16 +32,22 @@ import com.mrlolethan.butteredpd.actors.blobs.ToxicGas;
 import com.mrlolethan.butteredpd.actors.buffs.Poison;
 import com.mrlolethan.butteredpd.effects.CellEmitter;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.mrlolethan.butteredpd.items.ArenaShopKey;
 import com.mrlolethan.butteredpd.items.TomeOfMastery;
+import com.mrlolethan.butteredpd.items.artifacts.LloydsBeacon;
 import com.mrlolethan.butteredpd.items.keys.SkeletonKey;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfMagicMapping;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfPsionicBlast;
 import com.mrlolethan.butteredpd.items.weapon.enchantments.Death;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
+import com.mrlolethan.butteredpd.levels.traps.PoisonTrap;
 import com.mrlolethan.butteredpd.mechanics.Ballistica;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.sprites.TenguSprite;
+import com.mrlolethan.butteredpd.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Tengu extends Mob {
@@ -101,7 +103,18 @@ public class Tengu extends Mob {
 		}
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		
+		if (Dungeon.gamemode == GameMode.REGULAR) {
+			Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		} else if (Dungeon.gamemode == GameMode.ARENA) {
+			// Level up
+			Dungeon.hero.earnExp(Dungeon.hero.maxExp());
+			
+			ArenaShopKey key = new ArenaShopKey();
+			key.identify();
+			Dungeon.level.drop(key, pos).sprite.drop();
+		}
+		
 		super.die( cause );
 		
 		Badges.validateBossSlain();

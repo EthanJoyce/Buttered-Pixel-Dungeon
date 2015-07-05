@@ -20,6 +20,18 @@
  */
 package com.mrlolethan.butteredpd.ui;
 
+import com.mrlolethan.butteredpd.Assets;
+import com.mrlolethan.butteredpd.Dungeon;
+import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.effects.particles.BloodParticle;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.mrlolethan.butteredpd.items.keys.IronKey;
+import com.mrlolethan.butteredpd.levels.ArenaLevel;
+import com.mrlolethan.butteredpd.scenes.GameScene;
+import com.mrlolethan.butteredpd.scenes.PixelScene;
+import com.mrlolethan.butteredpd.sprites.HeroSprite;
+import com.mrlolethan.butteredpd.windows.WndGame;
+import com.mrlolethan.butteredpd.windows.WndHero;
 import com.watabou.input.Touchscreen.Touch;
 import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
@@ -30,16 +42,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Button;
 import com.watabou.noosa.ui.Component;
-import com.mrlolethan.butteredpd.Assets;
-import com.mrlolethan.butteredpd.Dungeon;
-import com.mrlolethan.butteredpd.effects.Speck;
-import com.mrlolethan.butteredpd.effects.particles.BloodParticle;
-import com.mrlolethan.butteredpd.items.keys.IronKey;
-import com.mrlolethan.butteredpd.scenes.GameScene;
-import com.mrlolethan.butteredpd.scenes.PixelScene;
-import com.mrlolethan.butteredpd.sprites.HeroSprite;
-import com.mrlolethan.butteredpd.windows.WndGame;
-import com.mrlolethan.butteredpd.windows.WndHero;
 
 public class StatusPane extends Component {
 
@@ -53,6 +55,7 @@ public class StatusPane extends Component {
 	private Image exp;
 
 	private int lastLvl = -1;
+	private int lastDepth = -1;
 	private int lastKeys = -1;
 
 	private BitmapText level;
@@ -108,7 +111,12 @@ public class StatusPane extends Component {
 		level.hardlight( 0xFFEBA4 );
 		add( level );
 
-		depth = new BitmapText( Integer.toString( Dungeon.depth ), PixelScene.font1x );
+		if (Dungeon.gamemode == GameMode.ARENA) {
+			lastDepth = Dungeon.level instanceof ArenaLevel ? ((ArenaLevel) Dungeon.level).getWave() : Dungeon.depth;
+		} else {
+			lastDepth = Dungeon.depth;
+		}
+		depth = new BitmapText( Integer.toString( lastDepth ), PixelScene.font1x );
 		depth.hardlight( 0xCACFC2 );
 		depth.measure();
 		add( depth );
@@ -187,6 +195,20 @@ public class StatusPane extends Component {
 			level.measure();
 			level.x = PixelScene.align( 27.0f - level.width() / 2 );
 			level.y = PixelScene.align( 27.5f - level.baseLine() / 2 );
+		}
+
+		int currentDepth;
+		if (Dungeon.gamemode == GameMode.ARENA) {
+			// Only update the wave if the current level is the ArenaLevel
+			currentDepth = Dungeon.level instanceof ArenaLevel ? ((ArenaLevel) Dungeon.level).getWave() : lastDepth;
+		} else {
+			currentDepth = Dungeon.depth;
+		}
+		if (currentDepth != lastDepth) {
+			lastDepth = currentDepth;
+			depth.text(Integer.toString(currentDepth));
+			depth.hardlight( 0xCACFC2 );
+			depth.measure();
 		}
 
 		int k = IronKey.curDepthQuantity;

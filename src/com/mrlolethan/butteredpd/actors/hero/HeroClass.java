@@ -25,6 +25,7 @@ import com.mrlolethan.butteredpd.Badges;
 import com.mrlolethan.butteredpd.Challenges;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
+import com.mrlolethan.butteredpd.items.ArenaShopKey;
 import com.mrlolethan.butteredpd.items.TomeOfMastery;
 import com.mrlolethan.butteredpd.items.armor.ClothArmor;
 import com.mrlolethan.butteredpd.items.artifacts.CloakOfShadows;

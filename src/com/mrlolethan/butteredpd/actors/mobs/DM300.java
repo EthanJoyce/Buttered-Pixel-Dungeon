@@ -23,6 +23,8 @@ package com.mrlolethan.butteredpd.actors.mobs;
 import java.util.HashSet;
 
 import com.mrlolethan.butteredpd.actors.buffs.Terror;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.mrlolethan.butteredpd.items.ArenaShopKey;
 import com.mrlolethan.butteredpd.items.artifacts.CapeOfThorns;
 import com.mrlolethan.butteredpd.items.artifacts.LloydsBeacon;
 import com.watabou.noosa.Camera;
@@ -134,7 +136,17 @@ public class DM300 extends Mob {
 		super.die( cause );
 		
 		GameScene.bossSlain();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth  ), pos ).sprite.drop();
+		
+		if (Dungeon.gamemode == GameMode.REGULAR) {
+			Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		} else if (Dungeon.gamemode == GameMode.ARENA) {
+			// Level up
+			Dungeon.hero.earnExp(Dungeon.hero.maxExp());
+			
+			ArenaShopKey key = new ArenaShopKey();
+			key.identify();
+			Dungeon.level.drop(key, pos).sprite.drop();
+		}
 		
 		Badges.validateBossSlain();
 

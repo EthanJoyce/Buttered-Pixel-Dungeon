@@ -22,24 +22,15 @@ package com.mrlolethan.butteredpd.scenes;
 
 import java.util.HashMap;
 
-import com.watabou.noosa.BitmapText;
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Group;
-import com.watabou.noosa.Image;
-import com.watabou.noosa.audio.Sample;
-import com.watabou.noosa.particles.Emitter;
-import com.watabou.noosa.ui.Button;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Badges;
+import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.GamesInProgress;
-import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
 import com.mrlolethan.butteredpd.effects.BannerSprites;
-import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.effects.BannerSprites.Type;
+import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.ui.Archs;
 import com.mrlolethan.butteredpd.ui.ExitButton;
 import com.mrlolethan.butteredpd.ui.Icons;
@@ -49,6 +40,15 @@ import com.mrlolethan.butteredpd.windows.WndChallenges;
 import com.mrlolethan.butteredpd.windows.WndClass;
 import com.mrlolethan.butteredpd.windows.WndMessage;
 import com.mrlolethan.butteredpd.windows.WndOptions;
+import com.watabou.noosa.BitmapText;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Group;
+import com.watabou.noosa.Image;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.noosa.ui.Button;
 import com.watabou.utils.Callback;
 
 public class StartScene extends PixelScene {
@@ -131,7 +131,7 @@ public class StartScene extends PixelScene {
 		btnNewGame = new GameButton( TXT_NEW ) {
 			@Override
 			protected void onClick() {
-				if (GamesInProgress.check( curClass ) != null) {
+				if (GamesInProgress.check( Dungeon.gamemode, curClass ) != null) {
 					StartScene.this.add( new WndOptions( TXT_REALLY, TXT_WARNING, TXT_YES, TXT_NO ) {
 						@Override
 						protected void onSelect( int index ) {
@@ -268,7 +268,7 @@ public class StartScene extends PixelScene {
 
 			unlock.visible = false;
 
-			GamesInProgress.Info info = GamesInProgress.check( curClass );
+			GamesInProgress.Info info = GamesInProgress.check( Dungeon.gamemode, curClass );
 			if (info != null) {
 
 				btnLoad.visible = true;

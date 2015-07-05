@@ -20,28 +20,35 @@
  */
 package com.mrlolethan.butteredpd;
 
-import com.mrlolethan.butteredpd.actors.hero.HeroClass;
-import com.watabou.utils.Bundle;
-
-import java.io.IOException;
 import java.util.HashMap;
+
+import com.mrlolethan.butteredpd.actors.hero.HeroClass;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.watabou.utils.Bundle;
 
 public class GamesInProgress {
 
-	private static HashMap<HeroClass, Info> state = new HashMap<HeroClass, Info>();
+	private static HashMap<GameMode, HashMap<HeroClass, Info>> state = new HashMap<GameMode, HashMap<HeroClass, Info>>();
+	static {
+		for (GameMode mode : GameMode.values()) {
+			HashMap<HeroClass, Info> infoMap = new HashMap<HeroClass, Info>();
+			state.put(mode, infoMap);
+		}
+	}
 	
-	public static Info check( HeroClass cl ) {
+	
+	public static Info check( GameMode gamemode, HeroClass cl ) {
 		
-		if (state.containsKey( cl )) {
+		if (state.containsKey(gamemode) && state.get(gamemode).containsKey( cl )) {
 			
-			return state.get( cl );
+			return state.get(gamemode).get(cl);
 			
 		} else {
 			
 			Info info;
 			try {
 				
-				Bundle bundle = Dungeon.gameBundle( Dungeon.gameFile( cl ) );
+				Bundle bundle = Dungeon.gameBundle( Dungeon.gameFile( gamemode, cl ) );
 				info = new Info();
 				Dungeon.preview( info, bundle );
 
@@ -49,26 +56,26 @@ public class GamesInProgress {
 				info = null;
 			}
 			
-			state.put( cl, info );
+			state.get(gamemode).put(cl, info);
 			return info;
 			
 		}
 	}
 
-	public static void set( HeroClass cl, int depth, int level, boolean challenges ) {
+	public static void set( GameMode gamemode, HeroClass cl, int depth, int level, boolean challenges ) {
 		Info info = new Info();
 		info.depth = depth;
 		info.level = level;
 		info.challenges = challenges;
-		state.put( cl, info );
+		state.get(gamemode).put( cl, info );
 	}
 	
-	public static void setUnknown( HeroClass cl ) {
-		state.remove( cl );
+	public static void setUnknown( GameMode gamemode, HeroClass cl ) {
+		state.get(gamemode).remove( cl );
 	}
 	
-	public static void delete( HeroClass cl ) {
-		state.put( cl, null );
+	public static void delete( GameMode gamemode, HeroClass cl ) {
+		state.get(gamemode).put( cl, null );
 	}
 	
 	public static class Info {

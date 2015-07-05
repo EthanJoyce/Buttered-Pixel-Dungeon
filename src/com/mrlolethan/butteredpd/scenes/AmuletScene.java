@@ -20,16 +20,16 @@
  */
 package com.mrlolethan.butteredpd.scenes;
 
-import com.watabou.noosa.BitmapTextMultiline;
-import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.Image;
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.ResultDescriptions;
 import com.mrlolethan.butteredpd.effects.Flare;
 import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.ui.RedButton;
+import com.watabou.noosa.BitmapTextMultiline;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.utils.Random;
 
 public class AmuletScene extends PixelScene {
@@ -71,7 +71,7 @@ public class AmuletScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				Dungeon.win( ResultDescriptions.WIN );
-				Dungeon.deleteGame( Dungeon.hero.heroClass, true );
+				Dungeon.deleteGame( Dungeon.gamemode, Dungeon.hero.heroClass, true );
 				Game.switchScene( noText ? TitleScene.class : RankingsScene.class );
 			}
 		};

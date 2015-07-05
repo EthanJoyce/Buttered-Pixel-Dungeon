@@ -300,8 +300,16 @@ public class ButteredPixelDungeon extends Game {
 		return Preferences.INSTANCE.getBoolean( Preferences.KEY_BRIGHTNESS, false );
 	}
 
+	public static void lastGameMode( int value ) {
+		Preferences.INSTANCE.put( Preferences.KEY_LAST_GAMEMODE, value );
+	}
+	
 	public static void lastClass( int value ) {
 		Preferences.INSTANCE.put( Preferences.KEY_LAST_CLASS, value );
+	}
+	
+	public static int lastGameMode() {
+		return Preferences.INSTANCE.getInt( Preferences.KEY_LAST_GAMEMODE, 0 );
 	}
 	
 	public static int lastClass() {

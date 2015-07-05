@@ -123,7 +123,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnPlay = new DashboardItem( TXT_PLAY, 0 ) {
 			@Override
 			protected void onClick() {
-				ButteredPixelDungeon.switchNoFade( StartScene.class );
+				ButteredPixelDungeon.switchNoFade( ChooseModeScene.class );
 			}
 		};
 		add( btnPlay );

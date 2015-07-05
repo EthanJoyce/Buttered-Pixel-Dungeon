@@ -23,6 +23,7 @@ package com.mrlolethan.butteredpd.actors.mobs;
 import java.util.HashSet;
 
 import com.mrlolethan.butteredpd.actors.buffs.Vertigo;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.artifacts.LloydsBeacon;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfTeleportation;
 import com.mrlolethan.butteredpd.utils.GLog;
@@ -37,6 +38,7 @@ import com.mrlolethan.butteredpd.actors.buffs.Buff;
 import com.mrlolethan.butteredpd.actors.buffs.Paralysis;
 import com.mrlolethan.butteredpd.effects.Flare;
 import com.mrlolethan.butteredpd.effects.Speck;
+import com.mrlolethan.butteredpd.items.ArenaShopKey;
 import com.mrlolethan.butteredpd.items.ArmorKit;
 import com.mrlolethan.butteredpd.items.keys.SkeletonKey;
 import com.mrlolethan.butteredpd.items.scrolls.ScrollOfPsionicBlast;
@@ -143,7 +145,17 @@ public class King extends Mob {
 
 		GameScene.bossSlain();
 		Dungeon.level.drop( new ArmorKit(), pos ).sprite.drop();
-		Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		
+		if (Dungeon.gamemode == GameMode.REGULAR) {
+			Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
+		} else if (Dungeon.gamemode == GameMode.ARENA) {
+			// Level up
+			Dungeon.hero.earnExp(Dungeon.hero.maxExp());
+			
+			ArenaShopKey key = new ArenaShopKey();
+			key.identify();
+			Dungeon.level.drop(key, pos).sprite.drop();
+		}
 		
 		super.die( cause );
 		

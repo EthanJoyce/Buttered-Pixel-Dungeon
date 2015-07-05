@@ -20,6 +20,9 @@
  */
 package com.mrlolethan.butteredpd.scenes;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.Statistics;
@@ -33,9 +36,6 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class InterlevelScene extends PixelScene {
 
@@ -271,7 +271,7 @@ public class InterlevelScene extends PixelScene {
 		
 		Actor.fixTime();
 		
-		Dungeon.loadGame( StartScene.curClass );
+		Dungeon.loadGame( Dungeon.gamemode, StartScene.curClass );
 		if (Dungeon.depth == -1) {
 			Dungeon.depth = Statistics.deepestFloor;
 			Dungeon.switchLevel( Dungeon.loadLevel( StartScene.curClass ), -1 );
