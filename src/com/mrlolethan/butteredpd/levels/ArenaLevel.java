@@ -359,4 +359,8 @@ public class ArenaLevel extends Level {
 	public int getWave() {
 		return wave;
 	}
+	
+	public boolean isBossWave() {
+		return wave % 5 == 0;
+	}
 }

@@ -1135,9 +1135,12 @@ public class Hero extends Char {
 				HT += 5;
 				if (Dungeon.gamemode == GameMode.ARENA) {
 					HP = HT;
-					ArenaLevel level = (ArenaLevel)Dungeon.level;
 					
-					level.nextWave();
+					if (Dungeon.level instanceof ArenaLevel) {
+						ArenaLevel level = (ArenaLevel) Dungeon.level;
+						
+						level.nextWave();
+					}
 				} else {
 					HP += 5;
 				}
