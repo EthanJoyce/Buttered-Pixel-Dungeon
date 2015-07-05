@@ -102,6 +102,11 @@ public class ArenaShopKey extends Item {
 	}
 
 	@Override
+	public boolean isUpgradable() {
+		return false;
+	}
+
+	@Override
 	public Glowing glowing() {
 		return new Glowing(0xFFFF00);
 	}
