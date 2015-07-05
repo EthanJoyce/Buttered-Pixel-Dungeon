@@ -32,7 +32,6 @@ import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.mrlolethan.butteredpd.windows.WndMessage;
 import com.watabou.noosa.audio.Sample;
-import com.watabou.utils.Random;
 
 public class Sign {
 
@@ -104,7 +103,7 @@ public class Sign {
 		} else {
 			
 			if (Dungeon.gamemode == GameMode.ARENA) {
-				GameScene.show(new WndMessage(String.format("Pixel Mart - Branch #%03d", Random.Int(999))));
+				GameScene.show(new WndMessage("Pixel-Mart. Spend money. Live longer."));
 			} else {
 				int index = Dungeon.depth - 1;
 				
