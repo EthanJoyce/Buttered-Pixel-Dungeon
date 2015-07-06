@@ -217,7 +217,7 @@ public class InterlevelScene extends PixelScene {
 		Actor.fixTime();
 		if (Dungeon.hero == null) {
 			Dungeon.init();
-			if (noStory) {
+			if (noStory || Dungeon.gamemode == GameMode.ARENA) {
 				Dungeon.chapters.add( WndStory.ID_SEWERS );
 				noStory = false;
 			}
