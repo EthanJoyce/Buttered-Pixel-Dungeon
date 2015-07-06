@@ -55,7 +55,7 @@ public class StatusPane extends Component {
 	private Image exp;
 
 	private int lastLvl = -1;
-	private int lastDepth = -1;
+	private static int lastDepth = -1;
 	private int lastKeys = -1;
 
 	private BitmapText level;
@@ -112,7 +112,7 @@ public class StatusPane extends Component {
 		add( level );
 
 		if (Dungeon.gamemode == GameMode.ARENA) {
-			lastDepth = Dungeon.level instanceof ArenaLevel ? ((ArenaLevel) Dungeon.level).getWave() : Dungeon.depth;
+			lastDepth = Dungeon.level instanceof ArenaLevel ? ((ArenaLevel) Dungeon.level).getWave() : lastDepth;
 		} else {
 			lastDepth = Dungeon.depth;
 		}
