@@ -289,7 +289,7 @@ public class ChooseModeScene extends PixelScene {
 
 			super.createChildren();
 
-			image = new Image( Assets.MINIGAMES );
+			image = new Image( Assets.GAMEMODES );
 			add( image );
 
 			name = PixelScene.createText( 9 );
