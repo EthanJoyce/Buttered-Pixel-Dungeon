@@ -247,6 +247,7 @@ public class ArenaLevel extends Level {
 	
 	@Override
 	protected void createItems() {
+		Generator.reset();
 		
 		int nItems = 6;
 		int bonus = 0;
