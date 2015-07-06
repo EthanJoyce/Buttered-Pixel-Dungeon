@@ -418,7 +418,7 @@ public abstract class Mob extends Char {
 				Badges.validateNightHunter();
 			}
 			
-			if (Dungeon.gamemode == GameMode.ARENA) {
+			if (Dungeon.gamemode == GameMode.ARENA && Dungeon.level instanceof ArenaLevel) {
 				ArenaLevel level = (ArenaLevel) Dungeon.level;
 				
 				final int oldWave = level.getWave();
