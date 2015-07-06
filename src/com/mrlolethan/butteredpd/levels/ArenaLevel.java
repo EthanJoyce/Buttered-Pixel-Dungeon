@@ -20,6 +20,8 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
+import android.util.Log;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Dungeon;
@@ -109,9 +111,9 @@ public class ArenaLevel extends Level {
 			Mob mob = Bestiary.mob( wave );
 			mob.pos = Random.Int(LENGTH);
 
-			if (findMob(mob.pos) == null && Level.passable[mob.pos] && !fieldOfView[mob.pos]) {
+			if (findMob(mob.pos) == null && Level.passable[mob.pos] && !fieldOfView[mob.pos] && Level.distance(mob.pos, entrance) > 1) {
 				mobsToSpawn--;
-				if (Dungeon.level != null) {
+				if (Dungeon.level instanceof ArenaLevel) {
 					GameScene.add(mob);
 				} else {
 					mobs.add(mob);
