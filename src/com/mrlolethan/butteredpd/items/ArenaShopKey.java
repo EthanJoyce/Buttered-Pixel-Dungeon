@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.InterlevelScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite.Glowing;
@@ -64,6 +65,11 @@ public class ArenaShopKey extends Item {
 	
 	@Override
 	public void execute( Hero hero, String action ) {
+
+		if (Dungeon.gamemode != GameMode.ARENA) {
+			GLog.n("\"You shouldn't have this,\" whispers a ghostly voice. The key vanishes.");
+			return;
+		}
 
 		if (action == AC_ACTIVATE) {
 			for (int i=0; i < Level.NEIGHBOURS4.length; i++) {
