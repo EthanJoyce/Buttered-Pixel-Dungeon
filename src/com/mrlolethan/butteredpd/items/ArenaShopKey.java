@@ -27,6 +27,7 @@ import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.Actor;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.gamemodes.GameMode;
+import com.mrlolethan.butteredpd.levels.ArenaLevel;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.scenes.InterlevelScene;
 import com.mrlolethan.butteredpd.sprites.ItemSprite.Glowing;
@@ -68,6 +69,7 @@ public class ArenaShopKey extends Item {
 
 		if (Dungeon.gamemode != GameMode.ARENA) {
 			GLog.n("\"You shouldn't have this,\" whispers a ghostly voice. The key vanishes.");
+			detach(hero.belongings.backpack);
 			return;
 		}
 
@@ -79,12 +81,15 @@ public class ArenaShopKey extends Item {
 				}
 			}
 			
-			if (Dungeon.depth == 1) {
-				this.switchToNewShop();
-				detach(hero.belongings.backpack);
-			} else {
+			// If we aren't in the arena level, or it's a boss wave ...
+			if (!(Dungeon.level instanceof ArenaLevel) || ((ArenaLevel) Dungeon.level).isBossWave()) {
+				// ... prevent use of the key
 				GLog.n(TXT_FAIL);
+				return;
 			}
+			
+			this.switchToNewShop();
+			detach(hero.belongings.backpack);
 		} else {
 			super.execute( hero, action );
 		}
