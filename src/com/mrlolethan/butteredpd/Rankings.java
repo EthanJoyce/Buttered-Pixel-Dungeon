@@ -26,8 +26,11 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 
 import com.mrlolethan.butteredpd.actors.hero.HeroClass;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.utils.Utils;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundlable;
@@ -41,12 +44,12 @@ public enum Rankings {
 	public static final int TABLE_SIZE	= 11;
 	
 	public static final String RANKINGS_FILE = "rankings.dat";
-	public static final String DETAILS_FILE = "game_%d.dat";
+	public static final String DETAILS_FILE = "%s--game_%d.dat";
 	
-	public ArrayList<Record> records;
+	private ArrayList<Record> records;
 	public int lastRecord;
-	public int totalNumber;
-	public int wonNumber;
+	private HashMap<GameMode, Integer> totalNumbers = new HashMap<GameMode, Integer>();
+	private HashMap<GameMode, Integer> wonNumbers = new HashMap<GameMode, Integer>();
 
 	public void submit( boolean win ) {
 
@@ -55,6 +58,7 @@ public enum Rankings {
 		Record rec = new Record();
 		
 		rec.info	= Dungeon.resultDescription;
+		rec.gamemode = Dungeon.gamemode;
 		rec.win		= win;
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
@@ -62,7 +66,7 @@ public enum Rankings {
 		rec.depth		= Dungeon.depth;
 		rec.score	= score( win );
 		
-		String gameFile = Utils.format( DETAILS_FILE, SystemTime.now );
+		String gameFile = Utils.format( DETAILS_FILE, rec.gamemode.getSavesPrefix(), SystemTime.now );
 		try {
 			Dungeon.saveGame( gameFile );
 			rec.gameFile = gameFile;
@@ -93,12 +97,12 @@ public enum Rankings {
 			size = records.size();
 		}
 		
-		totalNumber++;
+		this.incrementTotalNumber(rec.gamemode);
 		if (win) {
-			wonNumber++;
+			this.incrementWonNumber(rec.gamemode);
 		}
 
-		Badges.validateGamesPlayed();
+		Badges.validateGamesPlayed(rec.gamemode);
 		
 		save();
 	}
@@ -107,17 +111,23 @@ public enum Rankings {
 		return (Statistics.goldCollected + Dungeon.hero.lvl * (win ? 26 : Dungeon.depth ) * 100) * (win ? 2 : 1);
 	}
 	
+	public Record getLastRecord() {
+		return this.records == null || this.records.size() == 0 ? null : this.records.get(this.lastRecord);
+	}
+	
 	private static final String RECORDS	= "records";
 	private static final String LATEST	= "latest";
-	private static final String TOTAL	= "total";
-	private static final String WON     = "won";
+	private static final String TOTAL	= "total--%s";
+	private static final String WON     = "won--%s";
 
 	public void save() {
 		Bundle bundle = new Bundle();
 		bundle.put( RECORDS, records );
 		bundle.put( LATEST, lastRecord );
-		bundle.put( TOTAL, totalNumber );
-		bundle.put( WON, wonNumber );
+		for (GameMode gamemode : GameMode.values()) {
+			bundle.put(Utils.format(TOTAL, gamemode.name()), getTotalNumber(gamemode));
+			bundle.put(Utils.format(WON, gamemode.name()), getWonNumber(gamemode));
+		}
 
 		try {
 			OutputStream output = Game.instance.openFileOutput( RANKINGS_FILE, Game.MODE_PRIVATE );
@@ -145,18 +155,22 @@ public enum Rankings {
 			}
 			lastRecord = bundle.getInt( LATEST );
 			
-			totalNumber = bundle.getInt( TOTAL );
-			if (totalNumber == 0) {
-				totalNumber = records.size();
-			}
+			for (GameMode gamemode : GameMode.values()) {
+				int totalNumber = bundle.getInt(Utils.format(TOTAL, gamemode.name()));
+				if (totalNumber == 0) {
+					totalNumber = this.getRecords(gamemode).size();
+				}
+				totalNumbers.put(gamemode, totalNumber);
 
-			wonNumber = bundle.getInt( WON );
-			if (wonNumber == 0) {
-				for (Record rec : records) {
-					if (rec.win) {
-						wonNumber++;
+				int wonNumber = bundle.getInt(Utils.format(WON, gamemode.name()));
+				if (wonNumber == 0) {
+					for (Record rec : this.getRecords(gamemode)) {
+						if (rec.win) {
+							wonNumber++;
+						}
 					}
 				}
+				wonNumbers.put(gamemode, wonNumber);
 			}
 
 		} catch (IOException e) {
@@ -164,8 +178,43 @@ public enum Rankings {
 		}
 	}
 
+	/*
+	 * Accessors
+	 */
+	public List<Record> getRecords(GameMode gamemode) {
+		 List<Record> list = new  ArrayList<Record>();
+		 for (Record record : this.records) {
+		 	if (record.gamemode == gamemode) {
+		 		list.add(record);
+		 	}
+		 }
+		 return Collections.unmodifiableList(list);
+	}
+
+	public int getTotalNumber(GameMode gamemode) {
+		Integer totalNumber = this.totalNumbers.get(gamemode);
+		return totalNumber != null ? totalNumber : 0;
+	}
+
+	public void incrementTotalNumber(GameMode gamemode) {
+		Integer totalNumber = this.totalNumbers.get(gamemode);
+		this.totalNumbers.put(gamemode, totalNumber == null ? 1 : totalNumber + 1);
+	}
+
+	public int getWonNumber(GameMode gamemode) {
+		Integer wonNumber = this.wonNumbers.get(gamemode);
+		return wonNumber != null ? wonNumber : 0;
+	}
+
+	public void incrementWonNumber(GameMode gamemode) {
+		Integer wonNumber = this.wonNumbers.get(gamemode);
+		this.wonNumbers.put(gamemode, wonNumber == null ? 1 : wonNumber + 1);
+	}
+
+
 	public static class Record implements Bundlable {
 		
+		private static final String GAMEMODE = "gamemode";
 		private static final String REASON	= "reason";
 		private static final String WIN		= "win";
 		private static final String SCORE	= "score";
@@ -175,6 +224,7 @@ public enum Rankings {
 		private static final String GAME	= "gameFile";
 		
 		public String info;
+		public GameMode gamemode;
 		public boolean win;
 		
 		public HeroClass heroClass;
@@ -190,6 +240,7 @@ public enum Rankings {
 		public void restoreFromBundle( Bundle bundle ) {
 			
 			info	= bundle.getString( REASON );
+			gamemode = GameMode.values()[bundle.getInt(GAMEMODE)];
 			win		= bundle.getBoolean( WIN );
 			score	= bundle.getInt( SCORE );
 			
@@ -239,6 +290,7 @@ public enum Rankings {
 		public void storeInBundle( Bundle bundle ) {
 			
 			bundle.put( REASON, info );
+			bundle.put(GAMEMODE, gamemode.ordinal());
 			bundle.put( WIN, win );
 			bundle.put( SCORE, score );
 			

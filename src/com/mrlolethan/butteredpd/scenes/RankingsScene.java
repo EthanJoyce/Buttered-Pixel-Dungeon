@@ -20,10 +20,13 @@
  */
 package com.mrlolethan.butteredpd.scenes;
 
+import java.util.List;
+
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Rankings;
 import com.mrlolethan.butteredpd.effects.Flare;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.sprites.ItemSprite;
 import com.mrlolethan.butteredpd.sprites.ItemSpriteSheet;
 import com.mrlolethan.butteredpd.ui.Archs;
@@ -42,6 +45,8 @@ import com.watabou.utils.GameMath;
 
 public class RankingsScene extends PixelScene {
 	
+	private static final float ICON_SCALE = 0.5f;
+	
 	private static final String TXT_TITLE		= "Top Rankings";
 	private static final String TXT_TITLE_SUFFIX = "(Buttered)";
 	private static final String TXT_TOTAL		= "Games Played: ";
@@ -57,6 +62,7 @@ public class RankingsScene extends PixelScene {
 	private static final float GAP	= 4;
 	
 	private Archs archs;
+	public static GameMode gamemode;
 
 	@Override
 	public void create() {
@@ -75,8 +81,6 @@ public class RankingsScene extends PixelScene {
 		archs.setSize( w, h );
 		add( archs );
 		
-		Rankings.INSTANCE.load();
-
 		BitmapText title = PixelScene.createText(TXT_TITLE, 9);
 		title.hardlight(Window.SHPX_COLOR);
 		title.measure();
@@ -91,17 +95,25 @@ public class RankingsScene extends PixelScene {
 		titleSuffix.y = align( GAP );
 		add(titleSuffix);
 		
-		if (Rankings.INSTANCE.records.size() > 0) {
+		Image image = new Image(Assets.GAMEMODES);
+		add(image);
+		image.x = 5;
+		image.y = 5;
+		image.frame(gamemode.ordinal() * 32, 0, 32, 32);
+		image.scale.set(ICON_SCALE);
+		
+		List<Rankings.Record> records = Rankings.INSTANCE.getRecords(gamemode);
+		if (records.size() > 0) {
 
 			//attempts to give each record as much space as possible, ideally as much space as portrait mode
-			float rowHeight = GameMath.gate(ROW_HEIGHT_MIN, (uiCamera.height - 26)/Rankings.INSTANCE.records.size(), ROW_HEIGHT_MAX);
+			float rowHeight = GameMath.gate(ROW_HEIGHT_MIN, (uiCamera.height - 26)/records.size(), ROW_HEIGHT_MAX);
 
 			float left = (w - Math.min( MAX_ROW_WIDTH, w )) / 2 + GAP;
-			float top = align( (h - rowHeight  * Rankings.INSTANCE.records.size()) / 2 );
+			float top = align( (h - rowHeight  * records.size()) / 2 );
 			
 			int pos = 0;
 			
-			for (Rankings.Record rec : Rankings.INSTANCE.records) {
+			for (Rankings.Record rec : records) {
 				Record row = new Record( pos, pos == Rankings.INSTANCE.lastRecord, rec );
 				float offset =
 						rowHeight <= 14 ?
@@ -115,18 +127,18 @@ public class RankingsScene extends PixelScene {
 				pos++;
 			}
 			
-			if (Rankings.INSTANCE.totalNumber >= Rankings.TABLE_SIZE) {
+			if (Rankings.INSTANCE.getTotalNumber(gamemode) >= Rankings.TABLE_SIZE) {
 				BitmapText label = PixelScene.createText( TXT_TOTAL, 8 );
 				label.hardlight( 0xCCCCCC );
 				label.measure();
 				add( label );
 
-				BitmapText won = PixelScene.createText( Integer.toString( Rankings.INSTANCE.wonNumber ), 8 );
+				BitmapText won = PixelScene.createText( Integer.toString( Rankings.INSTANCE.getWonNumber(gamemode) ), 8 );
 				won.hardlight( Window.SHPX_COLOR );
 				won.measure();
 				add( won );
 
-				BitmapText total = PixelScene.createText( "/" + Rankings.INSTANCE.totalNumber, 8 );
+				BitmapText total = PixelScene.createText( "/" + Rankings.INSTANCE.getTotalNumber(gamemode), 8 );
 				total.hardlight( 0xCCCCCC );
 				total.measure();
 				total.x = align( (w - total.width()) / 2 );

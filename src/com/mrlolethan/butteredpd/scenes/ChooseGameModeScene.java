@@ -44,7 +44,7 @@ import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Button;
 import com.watabou.utils.Callback;
 
-public class ChooseModeScene extends PixelScene {
+public class ChooseGameModeScene extends PixelScene {
 
 	private static final float BUTTON_HEIGHT	= 24;
 
@@ -159,8 +159,8 @@ public class ChooseModeScene extends PixelScene {
 		Badges.loadingListener = new Callback() {
 			@Override
 			public void call() {
-				if (Game.scene() == ChooseModeScene.this) {
-					ButteredPixelDungeon.switchNoFade( ChooseModeScene.class );
+				if (Game.scene() == ChooseGameModeScene.this) {
+					ButteredPixelDungeon.switchNoFade( ChooseGameModeScene.class );
 				}
 			}
 		};

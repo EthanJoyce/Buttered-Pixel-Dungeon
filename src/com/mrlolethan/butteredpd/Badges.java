@@ -35,6 +35,7 @@ import com.mrlolethan.butteredpd.actors.mobs.Bandit;
 import com.mrlolethan.butteredpd.actors.mobs.Mob;
 import com.mrlolethan.butteredpd.actors.mobs.Senior;
 import com.mrlolethan.butteredpd.actors.mobs.Shielded;
+import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.Item;
 import com.mrlolethan.butteredpd.items.artifacts.Artifact;
 import com.mrlolethan.butteredpd.items.bags.PotionBandolier;
@@ -834,18 +835,18 @@ public class Badges {
 		PixelScene.showBadge( Badge.SUPPORTER );
 	}
 	
-	public static void validateGamesPlayed() {
+	public static void validateGamesPlayed(GameMode gamemode) {
 		Badge badge = null;
-		if (Rankings.INSTANCE.totalNumber >= 10) {
+		if (Rankings.INSTANCE.getTotalNumber(gamemode) >= 10) {
 			badge = Badge.GAMES_PLAYED_1;
 		}
-		if (Rankings.INSTANCE.totalNumber >= 100) {
+		if (Rankings.INSTANCE.getTotalNumber(gamemode) >= 100) {
 			badge = Badge.GAMES_PLAYED_2;
 		}
-		if (Rankings.INSTANCE.totalNumber >= 500) {
+		if (Rankings.INSTANCE.getTotalNumber(gamemode) >= 500) {
 			badge = Badge.GAMES_PLAYED_3;
 		}
-		if (Rankings.INSTANCE.totalNumber >= 2000) {
+		if (Rankings.INSTANCE.getTotalNumber(gamemode) >= 2000) {
 			badge = Badge.GAMES_PLAYED_4;
 		}
 		

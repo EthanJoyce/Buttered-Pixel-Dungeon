@@ -123,7 +123,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnPlay = new DashboardItem( TXT_PLAY, 0 ) {
 			@Override
 			protected void onClick() {
-				ButteredPixelDungeon.switchNoFade( ChooseModeScene.class );
+				ButteredPixelDungeon.switchNoFade( ChooseGameModeScene.class );
 			}
 		};
 		add( btnPlay );
@@ -131,7 +131,7 @@ public class TitleScene extends PixelScene {
 		DashboardItem btnHighscores = new DashboardItem( TXT_HIGHSCORES, 2 ) {
 			@Override
 			protected void onClick() {
-				ButteredPixelDungeon.switchNoFade( RankingsScene.class );
+				ButteredPixelDungeon.switchNoFade( ChooseRankingsModeScene.class );
 			}
 		};
 		add( btnHighscores );
