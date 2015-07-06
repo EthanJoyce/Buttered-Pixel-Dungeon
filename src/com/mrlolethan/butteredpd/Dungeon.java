@@ -214,12 +214,12 @@ public class Dungeon {
 		
 		Level level;
 		if (gamemode == GameMode.ARENA) {
-			if (depth == 2) {
-				level = new ArenaShopLevel();
+			if (depth == 1) {
+				level = new ArenaLevel();
 			} else if (depth == 26) {
 				level = new LastLevel();
 			} else {
-				level = new ArenaLevel();
+				level = new ArenaShopLevel();
 			}
 		} else {
 			switch (depth) {
