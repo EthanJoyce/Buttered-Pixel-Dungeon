@@ -95,6 +95,7 @@ import com.mrlolethan.butteredpd.items.scrolls.ScrollOfUpgrade;
 import com.mrlolethan.butteredpd.items.weapon.melee.MeleeWeapon;
 import com.mrlolethan.butteredpd.items.weapon.missiles.MissileWeapon;
 import com.mrlolethan.butteredpd.levels.ArenaLevel;
+import com.mrlolethan.butteredpd.levels.ArenaShopLevel;
 import com.mrlolethan.butteredpd.levels.Level;
 import com.mrlolethan.butteredpd.levels.Terrain;
 import com.mrlolethan.butteredpd.levels.features.AlchemyPot;
@@ -761,7 +762,7 @@ public class Hero extends Char {
 		if (pos == stairs && pos == Dungeon.level.exit) {
 			
 			if (Dungeon.gamemode == GameMode.ARENA) {
-				if (Dungeon.depth == 2) {
+				if (Dungeon.level instanceof ArenaShopLevel) {
 					GameScene.show(new WndMessage("You have a weird feeling that this isn't where you're supposed to be going..."));
 					ready();
 				} else {
