@@ -21,7 +21,6 @@
 package com.mrlolethan.butteredpd.items;
 //If it weren't super obvious, this is going to become an artifact soon.
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import com.mrlolethan.butteredpd.Dungeon;
@@ -72,12 +71,6 @@ public class ArenaShopKey extends Item {
 					GLog.w(TXT_CREATURES);
 					return;
 				}
-			}
-			
-			try {
-				Dungeon.saveLevel();
-			} catch (IOException ex) {
-				ex.printStackTrace();
 			}
 			
 			if (Dungeon.depth == 1) {
