@@ -20,8 +20,6 @@
  */
 package com.mrlolethan.butteredpd.levels;
 
-import android.util.Log;
-
 import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.ButteredPixelDungeon;
 import com.mrlolethan.butteredpd.Dungeon;
