@@ -1008,8 +1008,13 @@ public class Hero extends Char {
 			if (Actor.findChar( target ) == null) {
 				if (Level.pit[target] && !flying && !Chasm.jumpConfirmed) {
 					if (!Level.solid[target]) {
-						Chasm.heroJump(this);
-						interrupt();
+						// Prevent jumping in ArenaShopLevel chasms.
+						if (Dungeon.gamemode == GameMode.ARENA && Dungeon.level instanceof ArenaShopLevel) {
+							// Do nothing.
+						} else {
+							Chasm.heroJump(this);
+							interrupt();
+						}
 					}
 					return false;
 				}
