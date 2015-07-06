@@ -47,6 +47,8 @@ import com.watabou.noosa.ui.Button;
 
 public class WndRanking extends WndTabbed {
 	
+	private static final String TXT_HERO_SUFFIX = "(Buttered)";
+	
 	private static final String TXT_ERROR		= "Unable to load additional information";
 	
 	private static final String TXT_STATS	= "Stats";
@@ -175,6 +177,13 @@ public class WndRanking extends WndTabbed {
 			title.color(Window.SHPX_COLOR);
 			title.setRect( 0, 0, WIDTH, 0 );
 			add( title );
+			
+			BitmapText titleSuffix = PixelScene.createText(TXT_HERO_SUFFIX, 9);
+			titleSuffix.hardlight(Window.BUTTERED_COLOR);
+			titleSuffix.measure();
+			titleSuffix.x = (int) (WIDTH / 1.5);
+			titleSuffix.y = 0;
+			add(titleSuffix);
 			
 			float pos = title.bottom();
 

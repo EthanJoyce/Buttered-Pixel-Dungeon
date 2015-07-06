@@ -43,6 +43,7 @@ import com.watabou.utils.GameMath;
 public class RankingsScene extends PixelScene {
 	
 	private static final String TXT_TITLE		= "Top Rankings";
+	private static final String TXT_TITLE_SUFFIX = "(Buttered)";
 	private static final String TXT_TOTAL		= "Games Played: ";
 	private static final String TXT_NO_GAMES	= "No games have been played yet.";
 	
@@ -79,9 +80,16 @@ public class RankingsScene extends PixelScene {
 		BitmapText title = PixelScene.createText(TXT_TITLE, 9);
 		title.hardlight(Window.SHPX_COLOR);
 		title.measure();
-		title.x = align((w - title.width()) / 2);
+		title.x = align((w - title.width()) / (ButteredPixelDungeon.landscape() ? 2 : 3));
 		title.y = align( GAP );
 		add(title);
+		
+		BitmapText titleSuffix = PixelScene.createText(TXT_TITLE_SUFFIX, 9);
+		titleSuffix.hardlight(Window.BUTTERED_COLOR);
+		titleSuffix.measure();
+		titleSuffix.x = align((w - title.width()) / 2 + title.x / (ButteredPixelDungeon.landscape() ? 3 : 1));
+		titleSuffix.y = align( GAP );
+		add(titleSuffix);
 		
 		if (Rankings.INSTANCE.records.size() > 0) {
 

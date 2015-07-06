@@ -98,6 +98,7 @@ public class WndHero extends WndTabbed {
 	private class StatsTab extends Group {
 		
 		private static final String TXT_TITLE		= "Level %d %s";
+		private static final String TXT_TITLE_SUFFIX = "(Buttered)";
 		private static final String TXT_CATALOGUS	= "Catalogus";
 		private static final String TXT_JOURNAL		= "Journal";
 		
@@ -115,6 +116,13 @@ public class WndHero extends WndTabbed {
 			title.color(Window.SHPX_COLOR);
 			title.setRect( 0, 0, WIDTH, 0 );
 			add(title);
+
+			BitmapText titleSuffix = PixelScene.createText(TXT_TITLE_SUFFIX, 9);
+			titleSuffix.hardlight(Window.BUTTERED_COLOR);
+			titleSuffix.measure();
+			titleSuffix.x = (int) (WIDTH / 1.5);
+			titleSuffix.y = GAP;
+			add(titleSuffix);
 
 			RedButton btnCatalogus = new RedButton( TXT_CATALOGUS ) {
 				@Override
