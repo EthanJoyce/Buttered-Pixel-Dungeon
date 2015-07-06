@@ -50,7 +50,8 @@ public class WelcomeScene extends PixelScene {
 
 	private static final String TXT_Update =
 			"v0.0.1:\n" +
-					"- Built off of v0.3.0e of Shattered Pixel Dungeon:\n";
+					"- Added the Arena gamemode: fend off monsters in an arena, while improving your gear and amassing survival items!\n" +
+					"- Built off of v0.3.0e of Shattered Pixel Dungeon\n";
 
 	private static final String TXT_Future =
 			"It seems that your current saves are from a future version of Buttered Pixel Dungeon!\n\n"+
