@@ -96,7 +96,7 @@ public class ChooseModeScene extends PixelScene {
 		archs.setSize( w, h );
 		add( archs );
 
-		Image title = BannerSprites.get( Type.SELECT_YOUR_HERO );
+		Image title = BannerSprites.get( Type.SELECT_A_GAME );
 		title.x = align( (w - title.width()) / 2 );
 		title.y = align( top );
 		add( title );
