@@ -421,13 +421,13 @@ public abstract class Mob extends Char {
 			if (Dungeon.gamemode == GameMode.ARENA && Dungeon.level instanceof ArenaLevel) {
 				ArenaLevel level = (ArenaLevel) Dungeon.level;
 				
-				final int oldWave = level.getWave();
+				final int oldWave = Dungeon.wave;
 				
 				Dungeon.hero.sprite.showStatus( CharSprite.POSITIVE, TXT_EXP, EXP );
 				Dungeon.hero.earnExp( EXP );
 				
 				// If the player hasn't gone to the next wave
-				if (oldWave == level.getWave() && level.mobs.size() == 0) {
+				if (oldWave == Dungeon.wave && level.mobs.size() == 0) {
 					// then reset the floor (just respawns mobs)
 					level.reset();
 				}

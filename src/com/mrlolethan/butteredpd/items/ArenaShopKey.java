@@ -82,14 +82,13 @@ public class ArenaShopKey extends Item {
 			}
 			
 			// If we aren't in the arena level, or it's a boss wave ...
-			if (!(Dungeon.level instanceof ArenaLevel) || ((ArenaLevel) Dungeon.level).isBossWave()) {
+			if (!(Dungeon.level instanceof ArenaLevel) || Dungeon.bossLevel()) {
 				// ... prevent use of the key
 				GLog.n(TXT_FAIL);
 				return;
 			}
-			ArenaLevel level = (ArenaLevel) Dungeon.level;
 			
-			final int shopDepth = level.getWave() / 5 * 5;
+			final int shopDepth = Dungeon.wave / 5 * 5;
 			Dungeon.depth = Math.min(Math.max(shopDepth, 5), 20);
 			
 			this.switchToNewShop();

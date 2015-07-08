@@ -63,7 +63,7 @@ public enum Rankings {
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();
 		rec.herolevel	= Dungeon.hero.lvl;
-		rec.depth		= Dungeon.depth;
+		rec.depth		= rec.gamemode == GameMode.ARENA ? Dungeon.wave : Dungeon.depth;
 		rec.score	= score( win );
 		
 		String gameFile = Utils.format( DETAILS_FILE, rec.gamemode.getSavesPrefix(), SystemTime.now );

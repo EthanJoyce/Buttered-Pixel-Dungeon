@@ -24,7 +24,6 @@ import com.mrlolethan.butteredpd.Assets;
 import com.mrlolethan.butteredpd.Dungeon;
 import com.mrlolethan.butteredpd.actors.hero.Hero;
 import com.mrlolethan.butteredpd.gamemodes.GameMode;
-import com.mrlolethan.butteredpd.levels.ArenaLevel;
 import com.mrlolethan.butteredpd.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 
@@ -42,14 +41,11 @@ public class PotionOfExperience extends Potion {
 		setKnown();
 		
 		if (Dungeon.gamemode == GameMode.ARENA) {
-			if (Dungeon.level instanceof ArenaLevel) {
-				ArenaLevel level = (ArenaLevel) Dungeon.level;
-				if (level.isBossWave()) {
-					GLog.n("You accidentally drop the bottle and it smashes at your feet. Maybe you should just focus on the boss?");
-					Sample.INSTANCE.play( Assets.SND_SHATTER );
-					splash( hero.pos );
-					return;
-				}
+			if (Dungeon.bossLevel()) {
+				GLog.n("You accidentally drop the bottle and it smashes at your feet. Maybe you should just focus on the boss?");
+				Sample.INSTANCE.play( Assets.SND_SHATTER );
+				splash( hero.pos );
+				return;
 			}
 		}
 		

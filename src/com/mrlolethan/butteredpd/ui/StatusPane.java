@@ -26,7 +26,6 @@ import com.mrlolethan.butteredpd.effects.Speck;
 import com.mrlolethan.butteredpd.effects.particles.BloodParticle;
 import com.mrlolethan.butteredpd.gamemodes.GameMode;
 import com.mrlolethan.butteredpd.items.keys.IronKey;
-import com.mrlolethan.butteredpd.levels.ArenaLevel;
 import com.mrlolethan.butteredpd.scenes.GameScene;
 import com.mrlolethan.butteredpd.scenes.PixelScene;
 import com.mrlolethan.butteredpd.sprites.HeroSprite;
@@ -112,7 +111,7 @@ public class StatusPane extends Component {
 		add( level );
 
 		if (Dungeon.gamemode == GameMode.ARENA) {
-			lastDepth = Dungeon.level instanceof ArenaLevel ? ((ArenaLevel) Dungeon.level).getWave() : 0;
+			lastDepth = Dungeon.wave;
 		} else {
 			lastDepth = Dungeon.depth;
 		}
@@ -199,8 +198,7 @@ public class StatusPane extends Component {
 
 		int currentDepth;
 		if (Dungeon.gamemode == GameMode.ARENA) {
-			// Only update the wave if the current level is the ArenaLevel
-			currentDepth = Dungeon.level instanceof ArenaLevel ? ((ArenaLevel) Dungeon.level).getWave() : lastDepth;
+			currentDepth = Dungeon.wave;
 		} else {
 			currentDepth = Dungeon.depth;
 		}

@@ -140,6 +140,11 @@ public class Dungeon {
 
 	public static int version;
 	
+	/*
+	 * Arena members
+	 */
+	public static int wave;
+	
 	
 	public static void init() {
 
@@ -164,6 +169,7 @@ public class Dungeon {
 		QuickSlotButton.reset();
 		
 		depth = 0;
+		wave = 1;
 		gold = 0;
 
 		droppedItems = new SparseArray<ArrayList<Item>>();
@@ -301,7 +307,7 @@ public class Dungeon {
 	}
 	
 	public static boolean bossLevel() {
-		return bossLevel( depth );
+		return bossLevel( gamemode == GameMode.ARENA ? wave : depth );
 	}
 	
 	public static boolean bossLevel( int depth ) {
@@ -403,6 +409,11 @@ public class Dungeon {
 	private static final String QUESTS		= "quests";
 	private static final String BADGES		= "badges";
 
+	/*
+	 * Arena
+	 */
+	private static final String WAVE		= "wave";
+
 	//TODO: to support pre-0.2.3 saves, remove when needed
 	private static final String POS			= "potionsOfStrength";
 	private static final String SOU			= "scrollsOfEnhancement";
@@ -488,6 +499,8 @@ public class Dungeon {
 			Badges.saveLocal( badges );
 			bundle.put( BADGES, badges );
 			
+			bundle.put(WAVE, wave);
+			
 			OutputStream output = Game.instance.openFileOutput( fileName, Game.MODE_PRIVATE );
 			Bundle.write( bundle, output );
 			output.close();
@@ -515,7 +528,7 @@ public class Dungeon {
 			saveGame( gameFile( gamemode, hero.heroClass ) );
 			saveLevel();
 
-			GamesInProgress.set( gamemode, hero.heroClass, depth, hero.lvl, challenges != 0 );
+			GamesInProgress.set( gamemode, hero.heroClass, gamemode == GameMode.ARENA ? wave : depth, hero.lvl, challenges != 0 );
 
 		} else if (WndResurrect.instance != null) {
 			
@@ -610,6 +623,8 @@ public class Dungeon {
 		} else {
 			Badges.reset();
 		}
+		
+		wave = bundle.getInt(WAVE);
 		
 		hero = null;
 		hero = (Hero)bundle.get( HERO );

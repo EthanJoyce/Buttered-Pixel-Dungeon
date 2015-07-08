@@ -61,22 +61,19 @@ public class ArenaLevel extends Level {
 	private static final int ROOM_TOP		= HEIGHT / 2 - 1;
 	private static final int ROOM_BOTTOM	= HEIGHT / 2 + 1;
 	
-	private static final String WAVE = "wave";
-	private int wave = 1;
-	
 	private int stairs = -1;
 	private boolean enteredArena = false;
 	private boolean keyDropped = false;
 	
 	
 	public void nextWave() {
-		wave++;
+		Dungeon.wave++;
 
-		if (wave % 5 == 0) {
+		if (Dungeon.wave % 5 == 0) {
 			// Boss wave
 			this.clearMobs();
 			
-			switch (wave) {
+			switch (Dungeon.wave) {
 			case 5:
 				spawnBoss(new Goo());
 				break;
@@ -106,7 +103,7 @@ public class ArenaLevel extends Level {
 		int mobsToSpawn = Random.Int(5, 10);
 
 		while (mobsToSpawn > 0) {
-			Mob mob = Bestiary.mob( wave );
+			Mob mob = Bestiary.mob(Dungeon.wave);
 			mob.pos = Random.Int(LENGTH);
 
 			if (findMob(mob.pos) == null && Level.passable[mob.pos] && !fieldOfView[mob.pos] && Level.distance(mob.pos, entrance) > 1) {
@@ -172,7 +169,6 @@ public class ArenaLevel extends Level {
 		bundle.put( STAIRS, stairs );
 		bundle.put( ENTERED, enteredArena );
 		bundle.put( DROPPED, keyDropped );
-		bundle.put(WAVE, wave);
 	}
 	
 	@Override
@@ -181,7 +177,6 @@ public class ArenaLevel extends Level {
 		stairs = bundle.getInt( STAIRS );
 		enteredArena = bundle.getBoolean( ENTERED );
 		keyDropped = bundle.getBoolean( DROPPED );
-		wave = bundle.getInt(WAVE);
 	}
 	
 	@Override
@@ -351,17 +346,5 @@ public class ArenaLevel extends Level {
 	@Override
 	public void addVisuals( Scene scene ) {
 		HallsLevel.addVisuals( this, scene );
-	}
-
-
-	/*
-	 * Accessors
-	 */
-	public int getWave() {
-		return wave;
-	}
-	
-	public boolean isBossWave() {
-		return wave % 5 == 0;
 	}
 }
