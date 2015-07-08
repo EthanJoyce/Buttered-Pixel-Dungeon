@@ -91,7 +91,6 @@ public class ButteredPixelDungeon extends Game {
 
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate( Bundle savedInstanceState ) {
 		super.onCreate(savedInstanceState);
