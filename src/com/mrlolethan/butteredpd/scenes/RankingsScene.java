@@ -97,8 +97,8 @@ public class RankingsScene extends PixelScene {
 		
 		Image image = new Image(Assets.GAMEMODES);
 		add(image);
-		image.x = 5;
-		image.y = 5;
+		image.x = 1;
+		image.y = 1;
 		image.frame(gamemode.ordinal() * 32, 0, 32, 32);
 		image.scale.set(ICON_SCALE);
 		
